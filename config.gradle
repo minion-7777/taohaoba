@@ -9,7 +9,7 @@ ext {
     androidConfig = [
         minSdk     : 24,
         targetSdk  : 33,
-        compileSdk : 33,
+        compileSdk : 34,
         versionCode: 13,
         versionName: "1.1.2",
         abiFilters : ['armeabi','armeabi-v7a','arm64-v8a']

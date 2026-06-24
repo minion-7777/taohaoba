@@ -3,24 +3,24 @@
 3    package="com.tencent.qcloud.tuikit.tuiconversation" >
 4
 5    <uses-sdk android:minSdkVersion="19" />
-5-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+5-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 6
 7    <application>
-7-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:4:5-16:19
+7-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:4:5-16:19
 8
 9        <!-- **************** Classic UI Activity Start **************** -->
 10        <activity
-10-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:7:9-9:52
+10-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:7:9-9:52
 11            android:name="com.tencent.qcloud.tuikit.tuiconversation.classicui.page.TUIForwardSelectActivity"
-11-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:8:13-109
+11-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:8:13-109
 12            android:screenOrientation="portrait" />
-12-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:9:13-49
+12-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:9:13-49
 13        <activity
-13-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:11:9-13:52
+13-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:11:9-13:52
 14            android:name="com.tencent.qcloud.tuikit.tuiconversation.classicui.page.TUIFoldedConversationActivity"
-14-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:12:13-114
+14-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:12:13-114
 15            android:screenOrientation="portrait" />
-15-->D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:13:13-49
+15-->F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:13:13-49
 16        <!-- **************** Classic UI Activity End **************** -->
 17
 18    </application>

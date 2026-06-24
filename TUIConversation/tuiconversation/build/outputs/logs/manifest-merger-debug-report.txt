@@ -1,39 +1,39 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
+ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
 	package
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:11-69
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:4:5-16:19
+ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:4:5-16:19
 activity#com.tencent.qcloud.tuikit.tuiconversation.classicui.page.TUIForwardSelectActivity
-ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:7:9-9:52
+ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:7:9-9:52
 	android:screenOrientation
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:9:13-49
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:9:13-49
 	android:name
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:8:13-109
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:8:13-109
 activity#com.tencent.qcloud.tuikit.tuiconversation.classicui.page.TUIFoldedConversationActivity
-ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:11:9-13:52
+ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:11:9-13:52
 	android:screenOrientation
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:13:13-49
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:13:13-49
 	android:name
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:12:13-114
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:12:13-114
 uses-sdk
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		INJECTED from D:\AndroidFile\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
+		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml

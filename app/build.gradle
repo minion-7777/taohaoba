@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+    namespace "io.openim.android.taohaoba"
     compileSdk rootProject.ext.androidConfig.compileSdk
 
     dataBinding {
@@ -144,12 +145,15 @@ android {
     buildFeatures {
         viewBinding true
     }
-    lintOptions {
+    lint {
         checkReleaseBuilds false
         abortOnError false
     }
 
-    packagingOptions {
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
@@ -178,7 +182,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:${rootProject.ext.versions.androidx_lifecycle}"
-    implementation 'com.google.firebase:firebase-crashlytics-buildtools:3.0.3'
+// firebase-crashlytics-buildtools is a build tool; adding it as implementation bundles dump_syms binary into the APK
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -214,7 +218,7 @@ dependencies {
     //xPop
     implementation 'com.github.li-xiaojun:XPopup:2.10.0'
     // mmkv
-    implementation 'com.tencent:mmkv:1.2.14'
+    implementation 'com.tencent:mmkv:1.3.9'
     //上下拉刷新
     def smartRefresh = "2.0.1"
     implementation "com.scwang.smart:refresh-layout-kernel:$smartRefresh"
