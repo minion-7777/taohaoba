@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 1. 渐变边框（模拟） -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#595959"
+                android:centerColor="#B3A297"
+                android:endColor="#474749"
+                android:type="linear" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- 2. 背景色（覆盖中间部分） -->
+    <item android:left="1dp" android:top="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+<!--            <solid android:color="#242527" />-->
+            <gradient
+                android:angle="180"
+                android:startColor="#382C20"
+                android:endColor="#130F0C"
+                android:type="linear" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>

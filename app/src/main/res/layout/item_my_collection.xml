@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="12dp"
+      android:background="@drawable/gradient_border_shape"
+      android:orientation="horizontal">
+
+      <io.openim.android.taohaoba.widgets.RoundImageView
+          android:id="@+id/iv_img"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          app:corner_radius="10dp"
+          android:src="@mipmap/ic_me_bg"
+          android:scaleType="centerCrop"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="11dp"
+          android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/tv_hint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:textColor="#FFFFFF"
+              android:textSize="14sp"/>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_marginTop="8dp"
+              android:layout_height="wrap_content">
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/rc_recycler"
+                  android:layout_marginTop="10dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  tools:listitem="@layout/item_tag"
+                  tools:itemCount="2"/>
+
+              <TextView
+                  android:id="@+id/tv_time"
+                  android:layout_below="@+id/rc_recycler"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:text="神魔大陆十二区"
+                  android:textColor="#888888"
+                  android:textSize="12sp"/>
+
+              <ImageView
+                  android:id="@+id/iv_tag"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:src="@mipmap/ic_coll_removed"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_marginTop="8dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:id="@+id/tv_name"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginLeft="10dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:visibility="invisible"
+                  android:text="999人想要"
+                  android:textColor="#888888"
+                  android:textSize="12sp"/>
+
+              <TextView
+                  android:id="@+id/tv_price"
+                  android:layout_centerVertical="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="￥0.00"
+                  android:textColor="#FF4646"
+                  android:textSize="18sp"/>
+
+          </RelativeLayout>
+
+      </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

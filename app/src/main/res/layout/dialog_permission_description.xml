@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="34dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="权限说明"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_close"
+            android:padding="12dp"
+            android:layout_gravity="right"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:text="淘号8向您申请如下权限\n\n位置信息权限：用于提供更精准的服务匹配以及用于 APP交易环节的包赔认证服务。\n\n允许后您可以通过手机系统设置对授权进行管理"
+        android:textColor="#9C9C9C"
+        android:textSize="13sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_363739"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:text="允许"
+            android:textColor="#402802"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_ffd497_fafbf5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

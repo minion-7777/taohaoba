@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textTitle="发布商品"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_warn"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:background="#33EF4B4B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="出售游戏时，注册游戏所使用的账号也会被一并出售"
+            android:textColor="#FF3939"
+            android:textSize="12sp"
+            android:drawableStart="@mipmap/ic_authentication_gth"
+            android:drawablePadding="7dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sl_scroll"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="52dp"
+                    android:src="@mipmap/ic_product_success"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="商品信息已提交，请等待客服审核"
+                    android:textColor="#989898"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_jxfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="87dp"
+                    android:layout_marginEnd="87dp"
+                    android:gravity="center"
+                    android:text="继续发布"
+                    android:textColor="#402802"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_radius18_ffd497_fafbf5"/>
+
+                <TextView
+                    android:id="@+id/tv_ckyfb"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="87dp"
+                    android:layout_marginEnd="87dp"
+                    android:gravity="center"
+                    android:text="查看已发布的商品"
+                    android:textColor="#EACA92"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_radius18_line_eaca92"/>
+
+                <TextView
+                    android:id="@+id/tv_fhsy"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="87dp"
+                    android:layout_marginEnd="87dp"
+                    android:gravity="center"
+                    android:text="返回首页"
+                    android:textColor="#888888"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_radius18_line_b9b9b9"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

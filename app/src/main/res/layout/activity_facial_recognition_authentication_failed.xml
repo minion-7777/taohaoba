@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@mipmap/ic_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="实人信息认证"
+                android:textColor="#ffffff"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_portrait"
+            app:layout_constraintTop_toBottomOf="@+id/rl_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_failed"/>
+
+        <TextView
+            android:id="@+id/tv_text1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="实名信息认证失败"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_text2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="您已取消人脸识别认证"
+            android:textColor="#626262"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/tv_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="56dp"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="返回实人认证"
+                android:textColor="#FDE1B7"
+                android:textSize="14sp"
+                android:background="@drawable/shape_radius20_363739"/>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="#402802"
+                android:textSize="14sp"
+                android:background="@drawable/shape_radius20_ffd497_fafbf5"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

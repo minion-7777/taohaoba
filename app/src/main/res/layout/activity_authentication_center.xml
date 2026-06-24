@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="认证中心"/>
+
+        <TextView
+            android:id="@+id/tv_warn"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:background="#33EF4B4B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="根据国家规定，已成年的实名用户才能交易游戏虚拟物品，请填写信息完成实名认证"
+            android:textColor="#FF3939"
+            android:textSize="12sp"
+            android:drawableLeft="@mipmap/ic_authentication_gth"
+            android:drawablePadding="7dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_smrz"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_border_shape"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_smrz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_authentication_smrz"/>
+
+            <TextView
+                android:id="@+id/tv_smrz_text1"
+                app:layout_constraintStart_toEndOf="@+id/iv_smrz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实名认证"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_smrz_tag"
+                app:layout_constraintStart_toEndOf="@+id/tv_smrz_text1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:text="已认证"
+                android:textSize="11sp"
+                android:textColor="#0EB272"
+                android:background="@drawable/shape_radius2_5_1a0eb272"/>
+
+            <TextView
+                android:id="@+id/tv_smrz_text2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_smrz_text1"
+                app:layout_constraintStart_toStartOf="@+id/tv_smrz_text1"
+                app:layout_constraintEnd_toStartOf="@+id/tv_smrz_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="填写姓名身份证号可以买卖账号"
+                android:textSize="11sp"
+                android:textColor="#939393"/>
+
+            <TextView
+                android:id="@+id/tv_smrz_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="14dp"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="未认证"
+                android:textSize="12sp"
+                android:textColor="#402802"
+                android:background="@drawable/shape_radius15_ffd497_fafbf5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_srrz"
+            app:layout_constraintTop_toBottomOf="@+id/cl_smrz"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_border_shape"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_srrz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_authentication_srrz"/>
+
+            <TextView
+                android:id="@+id/tv_srrz_text1"
+                app:layout_constraintStart_toEndOf="@+id/iv_srrz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实人认证"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_srrz_tag"
+                app:layout_constraintStart_toEndOf="@+id/tv_srrz_text1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:text="已认证"
+                android:textSize="11sp"
+                android:textColor="#0EB272"
+                android:background="@drawable/shape_radius2_5_1a0eb272"/>
+
+            <TextView
+                android:id="@+id/tv_srrz_text2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_srrz_text1"
+                app:layout_constraintStart_toStartOf="@+id/tv_srrz_text1"
+                app:layout_constraintEnd_toStartOf="@+id/tv_srrz_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="身份证正反面+人脸认证"
+                android:textSize="11sp"
+                android:textColor="#939393"/>
+
+            <TextView
+                android:id="@+id/tv_srrz_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="14dp"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="未认证"
+                android:textSize="12sp"
+                android:textColor="#402802"
+                android:background="@drawable/shape_radius15_ffd497_fafbf5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_bprz"
+            app:layout_constraintTop_toBottomOf="@+id/cl_srrz"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_border_shape"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_bprz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="21dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_authentication_bprz"/>
+
+            <TextView
+                android:id="@+id/tv_bprz_text1"
+                app:layout_constraintStart_toEndOf="@+id/iv_bprz_img"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="包赔认证"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_bprz_tag"
+                app:layout_constraintStart_toEndOf="@+id/tv_bprz_text1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="9dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:paddingTop="2.5dp"
+                android:paddingBottom="2.5dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:text="已认证"
+                android:textSize="11sp"
+                android:textColor="#0EB272"
+                android:background="@drawable/shape_radius2_5_1a0eb272"/>
+
+            <TextView
+                android:id="@+id/tv_bprz_text2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bprz_text1"
+                app:layout_constraintStart_toStartOf="@+id/tv_bprz_text1"
+                app:layout_constraintEnd_toStartOf="@+id/tv_bprz_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="联系人+订单资料可以进行提现"
+                android:textSize="11sp"
+                android:textColor="#939393"/>
+
+            <TextView
+                android:id="@+id/tv_bprz_text3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bprz_text2"
+                app:layout_constraintStart_toStartOf="@+id/tv_bprz_text2"
+                app:layout_constraintEnd_toStartOf="@+id/tv_bprz_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="#939393"/>
+
+            <TextView
+                android:id="@+id/tv_bprz_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="14dp"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="未认证"
+                android:textSize="12sp"
+                android:textColor="#402802"
+                android:background="@drawable/shape_radius15_ffd497_fafbf5"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

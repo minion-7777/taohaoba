@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="查看凭证"/>
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_semicircle_radius15_ffd497_ffe5c0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal">
+
+                    <io.openim.android.taohaoba.widgets.RoundImageView
+                        android:id="@+id/iv_log"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        app:corner_radius="20dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/iv_app_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_log"
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="淘号8"
+                        android:textColor="#402802"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/iv_app_hint"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_app_name"
+                        app:layout_constraintStart_toStartOf="@+id/iv_app_name"
+                        android:layout_marginTop="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="平台买号找回包赔"
+                        android:textColor="#402802"
+                        android:textSize="11sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    app:layout_constraintTop_toBottomOf="@+id/cl_log"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="7.5dp"
+                    android:paddingRight="7.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/shape_semicircle_radius10_242527">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_vouchers_bg"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="23dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_vouchers_bg"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/tv_vouchers_txt"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="包赔证明"
+                            android:textColor="#EACA92"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_ddxx"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_vouchers_txt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单信息"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_ssyx1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_ddxx"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="所属游戏"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_ssyx"
+                            app:layout_constraintTop_toTopOf="@+id/tv_ssyx1"
+                            app:layout_constraintStart_toEndOf="@+id/tv_ssyx1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_yxzh1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_ssyx1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="游戏账号"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_yxzh"
+                            app:layout_constraintTop_toTopOf="@+id/tv_yxzh1"
+                            app:layout_constraintStart_toStartOf="@+id/tv_ssyx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_spbh1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_yxzh1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商品编号"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_spbh"
+                            app:layout_constraintTop_toTopOf="@+id/tv_spbh1"
+                            app:layout_constraintStart_toStartOf="@+id/tv_ssyx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_spjg1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_spbh1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="商品价格"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_spjg"
+                            app:layout_constraintTop_toTopOf="@+id/tv_spjg1"
+                            app:layout_constraintStart_toStartOf="@+id/tv_ssyx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_jywcsj1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_spjg1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="交易完成时间"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_jywcsj"
+                            app:layout_constraintTop_toTopOf="@+id/tv_jywcsj1"
+                            app:layout_constraintStart_toStartOf="@+id/tv_ssyx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_mjxx"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_jywcsj1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="25dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="买家信息"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_mjx1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_mjxx"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="买家微信"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_mjx"
+                            app:layout_constraintTop_toTopOf="@+id/tv_mjx1"
+                            app:layout_constraintStart_toEndOf="@+id/tv_ssyx1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_mjlxsj1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_mjx1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="买家联系手机"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_mjlxsj"
+                            app:layout_constraintTop_toTopOf="@+id/tv_mjlxsj1"
+                            app:layout_constraintStart_toStartOf="@+id/tv_ssyx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_bpfwxx1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_mjlxsj1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="38dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="包赔服务信息"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_bpfwxx"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bpfwxx1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="在游戏账号：---未出现转手给他人(换绑手机同视为转手)的情况下，若发生恶意找回申诉的情况，平台在7天以内未能成功帮助买家追回账号，需向买家支付RMB---元赔偿金。"
+                            android:textColor="#EACA92"
+                            android:textSize="11sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_tbzy1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_bpfwxx"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="30dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="特别注意:"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_tbzy"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_tbzy1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="18dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="不能私下更换手机号或脱离平台转手，否则包赔失效"
+                            android:textColor="#888888"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_gsmc"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_tbzy"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="77dp"
+                            android:layout_marginBottom="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="冉冉蓝焱科技（深圳）有限公司"
+                            android:textColor="#888888"
+                            android:textSize="11sp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_seal"
+                            app:layout_constraintTop_toTopOf="@+id/tv_tbzy"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_seal"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

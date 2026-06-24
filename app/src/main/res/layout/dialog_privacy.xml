@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_radius10_242527"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="隐私政策"
+        android:textSize="18sp"
+        android:textColor="#ffffff"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvAgreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人信息保护提示
+\n\t\t欢迎使用淘号8!
+\n\t\t我们将通过《服务协议》和《隐私政策》帮助您了解我们为您提供的服务、我们将如何处理个人信息以及您享有的权力。我们会严格按照相关法律法规要求，采取各种安全措施来保护您的个人信息。
+点击“同意”按钮，表示您已知情并同意以上协议和以下约定。
+\n1.为了保障软件的安全运行，我们会申请收集您的设备信息Wi-Fi SSID、Wi-Fi BSSID、IP地址、MAC地址。
+\n2.上传或拍摄图片以及进行认证时，需要使用您的存储、相机权限。
+\n3.当您进行包赔认证时，我们需要申请位置信息、通讯录权限。
+\n4.我们尊重您的选择权，您可以访问、修改、删除您的个人信息并管理您的授权，我们也为您提供注销、投诉渠道。"
+            android:textSize="15sp"
+            android:textColor="#ffffff"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="不同意"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_363739"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="#402802"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_ffd497_fafbf5"/>
+
+    </LinearLayout>
+
+</LinearLayout>

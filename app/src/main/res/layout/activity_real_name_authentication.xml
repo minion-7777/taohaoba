@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="实名认证"/>
+
+        <TextView
+            android:id="@+id/tv_warn"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:background="#33EF4B4B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="根据国家规定，已成年的实名用户才能交易游戏虚拟物品，请填写信息完成实名认证"
+            android:textColor="#FF3939"
+            android:textSize="12sp"
+            android:drawableLeft="@mipmap/ic_authentication_gth"
+            android:drawablePadding="7dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_smrz"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_border_shape"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_txta"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="#FF4646"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_txtb"
+                app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="真实姓名"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_name"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical|right"
+                android:background="@null"
+                android:paddingRight="2dp"
+                android:hint="请输入真实姓名"
+                android:textColor="#888888"
+                android:textColorHint="#ff888888"
+                android:textSize="15sp"/>
+
+            <View
+                android:id="@+id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_txta"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#393B3D"/>
+
+            <TextView
+                android:id="@+id/tv_txtc"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="#FF4646"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_txtd"
+                app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="身份证号"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_id_number"
+                app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical|right"
+                android:background="@null"
+                android:paddingRight="2dp"
+                android:hint="请输入身份证号"
+                android:textColor="#888888"
+                android:textColorHint="#ff888888"
+                android:textSize="15sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_txte"
+            app:layout_constraintTop_toBottomOf="@+id/cl_smrz"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="身份信息认证后不支持修改，请如实填写。\n后续涉及人脸、包赔等，如果与实名信息不匹配，则无法认证通过。"
+            android:textColor="#626262"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_txte"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#402802"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius18_ffd497_fafbf5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

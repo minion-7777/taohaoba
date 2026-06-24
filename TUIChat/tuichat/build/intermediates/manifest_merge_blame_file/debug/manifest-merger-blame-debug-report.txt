@@ -1,0 +1,103 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.qcloud.tuikit.tuichat" >
+4
+5    <uses-sdk android:minSdkVersion="19" />
+5-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml
+6
+7    <uses-permission
+7-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:4:5-5:38
+8        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+8-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:4:22-78
+9        android:maxSdkVersion="28" />
+9-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:5:9-35
+10    <uses-permission android:name="android.permission.CAMERA" />
+10-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:7:5-65
+10-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:7:22-62
+11    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+11-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:8:5-71
+11-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:8:22-68
+12    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+12-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:9:5-80
+12-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:9:22-77
+13
+14    <application>
+14-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:11:5-54:19
+15        <activity
+15-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:12:9-15:77
+16            android:name="com.tencent.qcloud.tuikit.tuichat.component.imagevideobrowse.ImageVideoBrowseActivity"
+16-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:13:13-113
+17            android:configChanges="screenSize|keyboardHidden|orientation"
+17-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:15:13-74
+18            android:launchMode="singleTask" />
+18-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:14:13-44
+19        <activity
+19-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:17:9-19:52
+20            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.FriendProfileActivity"
+20-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:18:13-98
+21            android:screenOrientation="portrait" />
+21-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:19:13-49
+22        <!-- **************** Classic UI Start **************** -->
+23        <activity
+23-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:21:9-24:52
+24            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.MessageReplyDetailActivity"
+24-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:22:13-103
+25            android:screenOrientation="portrait"
+25-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:24:13-49
+26            android:windowSoftInputMode="adjustResize|stateHidden" />
+26-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:23:13-67
+27        <activity
+27-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:25:9-27:52
+28            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIForwardChatActivity"
+28-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:26:13-99
+29            android:screenOrientation="portrait" />
+29-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:27:13-49
+30        <activity
+30-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:28:9-32:71
+31            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIC2CChatActivity"
+31-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:29:13-95
+32            android:launchMode="singleTask"
+32-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:30:13-44
+33            android:screenOrientation="portrait"
+33-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:31:13-49
+34            android:windowSoftInputMode="adjustNothing|stateHidden" />
+34-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:32:13-68
+35        <activity
+35-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:35:9-39:70
+36            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.TUIGroupChatActivity"
+36-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:36:13-97
+37            android:launchMode="singleTask"
+37-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:37:13-44
+38            android:screenOrientation="portrait"
+38-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:38:13-49
+39            android:windowSoftInputMode="adjustNothing|stateHidden" />
+39-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:39:13-68
+40        <activity
+40-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:41:9-43:52
+41            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.MessageReceiptDetailActivity"
+41-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:42:13-105
+42            android:screenOrientation="portrait" />
+42-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:43:13-49
+43        <activity
+43-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:44:9-46:52
+44            android:name="com.tencent.qcloud.tuikit.tuichat.component.camera.CameraActivity"
+44-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:45:13-93
+45            android:screenOrientation="portrait" />
+45-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:46:13-49
+46        <activity
+46-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:48:9-49:52
+47            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.GroupInfoActivity"
+47-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:48:19-100
+48            android:screenOrientation="portrait" />
+48-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:49:13-49
+49        <activity
+49-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:50:9-51:52
+50            android:name="com.tencent.qcloud.tuikit.tuichat.classicui.page.GroupNoticeActivity"
+50-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:50:19-102
+51            android:screenOrientation="portrait" />
+51-->D:\AndroidFile\taohaoba\TUIChat\tuichat\src\main\AndroidManifest.xml:51:13-49
+52        <!-- **************** Classic UI End **************** -->
+53
+54    </application>
+55
+56</manifest>

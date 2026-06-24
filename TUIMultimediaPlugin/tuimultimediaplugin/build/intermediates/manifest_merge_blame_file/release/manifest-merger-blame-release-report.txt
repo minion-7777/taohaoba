@@ -1,0 +1,62 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.qcloud.tuikit.tuimultimediaplugin" >
+4
+5    <uses-sdk android:minSdkVersion="19" />
+5-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml
+6
+7    <!-- Android 12 or lower -->
+8    <uses-permission
+8-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:5:5-7:38
+9        android:name="android.permission.READ_EXTERNAL_STORAGE"
+9-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:6:9-64
+10        android:maxSdkVersion="32" />
+10-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:7:9-35
+11
+12    <!-- Android 13 or higher -->
+13    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+13-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:10:5-76
+13-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:10:22-73
+14    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+14-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:11:5-75
+14-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:11:22-72
+15
+16    <!-- Android 14 or higher -->
+17    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+17-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:14:5-90
+17-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:14:22-87
+18
+19    <application android:supportsRtl="true" >
+19-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:16:5-34:19
+19-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:16:18-44
+20        <activity
+20-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:17:9-20:56
+21            android:name="com.tencent.qcloud.tuikit.tuimultimediaplugin.record.TUIMultimediaRecordActivity"
+21-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:18:17-112
+22            android:screenOrientation="portrait"
+22-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:20:17-53
+23            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+23-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:19:17-76
+24        <activity
+24-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:22:9-25:56
+25            android:name="com.tencent.qcloud.tuikit.tuimultimediaplugin.edit.TUIMultimediaEditActivity"
+25-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:23:17-108
+26            android:screenOrientation="portrait"
+26-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:25:17-53
+27            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+27-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:24:17-76
+28        <activity
+28-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:27:9-32:75
+29            android:name="com.tencent.qcloud.tuikit.tuimultimediaplugin.pick.ui.picker.AlbumPickerActivity"
+29-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:28:13-108
+30            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout|uiMode|locale"
+30-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:31:13-120
+31            android:exported="false"
+31-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:29:13-37
+32            android:screenOrientation="portrait"
+32-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:30:13-49
+33            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+33-->D:\AndroidFile\taohaoba\TUIMultimediaPlugin\tuimultimediaplugin\src\main\AndroidManifest.xml:32:13-72
+34    </application>
+35
+36</manifest>

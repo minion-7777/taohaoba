@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_home_bg"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/fl_search"
+                android:layout_toLeftOf="@+id/ll_customer_service"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12.5dp"
+                android:background="@drawable/shape_radius18_3c3c3c">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@mipmap/ic_search"
+                    android:layout_marginLeft="12dp"
+                    android:drawablePadding="10dp"
+                    android:text="搜索"
+                    android:textColor="#7B7B7B"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_radius15_feeba7"
+                    android:paddingLeft="23dp"
+                    android:paddingRight="23dp"
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="搜索"
+                    android:textColor="#402802"
+                    android:textSize="13sp"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_customer_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="12.5dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_customer_service"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.5dp"
+                    android:text="客服"
+                    android:textColor="#ADADAD"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshIndex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_but"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/banner"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="28dp"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/ll_choose_and_buy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_choose_and_buy"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.5dp"
+                                android:text="账号选购"
+                                android:textColor="#EACA92"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_recycle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_recycle"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.5dp"
+                                android:text="快速卖号"
+                                android:textColor="#EACA92"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_intermediary_guarantee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_intermediary_guarantee"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.5dp"
+                                android:text="中介担保"
+                                android:textColor="#EACA92"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_valuation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_valuation"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.5dp"
+                                android:text="账号估值"
+                                android:textColor="#EACA92"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_recycler"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_but"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="22.5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_border_shape">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rc_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="18dp"
+                            android:layout_margin="0.8dp"
+                            tools:itemCount="8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="4"
+                            tools:listitem="@layout/item_game_list"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_zuixin"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_recycler"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_latest_account"/>
+
+                    <TextView
+                        android:id="@+id/tv_zuixin_text"
+                        app:layout_constraintTop_toTopOf="@id/iv_zuixin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5.5dp"
+                        android:textStyle="bold"
+                        android:text="最新账号"
+                        android:textColor="#402802"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_zuixin_text_hint"
+                        app:layout_constraintEnd_toEndOf="@id/iv_zuixin"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_zuixin"
+                        android:layout_marginBottom="9dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:drawableLeft="@mipmap/ic_authentication"
+                        android:textStyle="bold"
+                        android:text="专业三方平台验号，确保信息真实"
+                        android:textColor="#EACA92"
+                        android:textSize="10sp"/>
+
+                    <HorizontalScrollView
+                        android:id="@+id/sl_layout1"
+                        app:layout_constraintTop_toBottomOf="@id/iv_zuixin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"><!-- 添加此属性隐藏滚动条 -->
+
+                        <com.flyco.tablayout.CommonTabLayout
+                            android:id="@+id/tb_layout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            app:tl_iconVisible="false"
+                            app:tl_tab_width="80dp"
+                            app:tl_indicator_color="#EACA92"
+                            app:tl_indicator_corner_radius="1.5dp"
+                            app:tl_indicator_height="3dp"
+                            app:tl_indicator_width="40dp"
+                            app:tl_textSelectColor="#EACA92"
+                            app:tl_textUnselectColor="#D6D6D6"
+                            app:tl_textsize="14sp"/>
+
+                    </HorizontalScrollView>
+
+                    <FrameLayout
+                        android:id="@+id/fragment_container"
+                        app:layout_constraintTop_toBottomOf="@id/sl_layout1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

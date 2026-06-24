@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_semicircle_radius10_242527">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="账号售价"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_close"
+            android:padding="12dp"
+            android:layout_gravity="right"/>
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_smrz"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_border_shape"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_txtb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="账号售价"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/tv_amount"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right"
+            android:background="@null"
+            android:paddingRight="2dp"
+            android:maxLength="10"
+            android:inputType="numberDecimal"
+            android:hint="请输入价格"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#ff888888"
+            android:textSize="15sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_text1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="手续费用"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_text2"
+            app:layout_constraintStart_toEndOf="@+id/tv_text1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="费率0.00%"
+            android:textColor="@color/color_8F8F8F"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_text3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="实际到手"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_text4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="￥0.00"
+            android:textColor="#EACA92"
+            android:textSize="15sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#402802"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+</LinearLayout>

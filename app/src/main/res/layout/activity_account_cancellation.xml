@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="账户注销"/>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="为保证您的账号以及财产安全,申请注销前，账户须同时满足以下全部条件:"
+                    android:textColor="#D6D6D6"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_ddxx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="1.无未提现金额;\n2.无未完结的账号交易订单(含待发货、待验号、等未完成订单和售后中订单等状态);\n3.无上架中的商品或账号，已下架商品的交易纠纷均已解决;"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="注:在您注销前需自行备份所有重要数据(如交易凭证、账号资料截图等)，注销后因未备份导致的售后服务缺失，由您自行承担;对注销前账户的所有行为及产生的责任负责，注销不视为义务豁免或责任减轻(如既往交易纠纷的赔偿责任)。"
+                    android:textColor="#D6D6D6"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#FF4646"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_agreement"
+                app:layout_constraintTop_toBottomOf="@+id/tv_to_login"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_check"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_check_f"/>
+
+                <TextView
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:gravity="center"
+                    android:text="我已认真阅读《淘号8注销协议》并接受所有条款"
+                    android:textColor="#D6D6D6"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_account_cancellation"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:text="确认注销"
+                android:textSize="14sp"
+                android:textColor="#402802"
+                android:gravity="center"
+                android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

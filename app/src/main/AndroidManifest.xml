@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.openim.android.taohaoba">
+    <!--hardwareAccelerated=false livekit 会出问题 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 声明需要相机硬件，但非强制要求（允许无相机设备安装） -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- 声明相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <!-- 通讯录读取权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <!--华为手机更新应用桌面角标需要的权限-->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.vivo.notification.permission.BADGE_ICON" />
+    <uses-permission android:name="com.vivo.abe.permission.launcher.notification.num" />
+
+<!--    <queries>-->
+<!--        <intent>-->
+<!--            <action android:name="com.getui.sdk.action" />-->
+<!--        </intent>-->
+<!--    </queries>-->
+    <!-- Android 11+包可见性声明 -->
+    <queries>
+        <package android:name="com.android.providers.contacts"/>
+    </queries>
+    <queries>
+        <package android:name="com.autonavi.minimap" />
+    </queries>
+
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE">
+
+            </action>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE">
+
+            </action>
+        </intent>
+    </queries>
+
+    <application
+        android:name="io.openim.android.taohaoba.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Main"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="tiramisu"
+        tools:replace="android:theme,android:allowBackup"
+        >
+        <!-- 渠道信息注入 -->
+        <meta-data
+            android:name="CHANNEL_NAME"
+            android:value="${CHANNEL_NAME}" />
+
+        <meta-data android:name="ScopedStorage" android:value="true" />
+        <!--个推SDK的appid 重要！必须补充-->
+<!--        <meta-data-->
+<!--            android:name="GETUI_APPID"-->
+<!--            android:value="xzdsM5fySiAMvJCd0wdcn1" />-->
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+        <activity
+            android:name="io.openim.android.taohaoba.ui.login.LoginThbActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="io.openim.android.taohaoba.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" /> &lt;!&ndash; 带此属性 &ndash;&gt;-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.openim.android.taohaoba.ui.main.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/NotAnimation"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.me.WithdrawalRecordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.WalletActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ViewVouchersActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.SettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ReceivingAccountBActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ReceivingAccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.RealPersonAuthenticationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.RealNameAuthenticationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.NicknameActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.MyCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.MyBuyOrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.CompensationCertificationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ChangePhoneNumberActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.BlackNumberQueryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AuthenticationCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AssetDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AfterSalesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.home.SellNumberActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.home.CustomerServiceCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.AccountNumberListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.ConfirmAnOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.OrderDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.ProductDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.PublishProductOneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.PublishProductTwoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.PublishProductSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.InputInformationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.game.SubmintAccountInformationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.home.RapidRecoveryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.CommodityManagementListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.MySellItOrderListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.group.GroupMemberThbActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.PushSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <!-- 必须添加的Activity声明 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name=".ui.activity.home.SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.home.SearchResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.MyAfterSalesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AfterSalesDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.HelpCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.HelpWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ActivityCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.ActivityCenterWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.CouponActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.UseCouponActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.activity.me.AccountCancellationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <!-- 请根据您当前自定义的 PushService 名称路径进行配置-->
+<!--        <service-->
+<!--            android:name=".services.PushService"-->
+<!--            android:exported="false"-->
+<!--            android:label="PushService"-->
+<!--            android:process=":pushservice"/>-->
+<!--        <service-->
+<!--            android:name=".services.IntentService"-->
+<!--            android:exported="false" />-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ranranlanyan.taohaoba.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

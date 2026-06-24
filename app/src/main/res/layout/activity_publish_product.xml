@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_warn"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:background="#33EF4B4B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="出售游戏时，注册游戏所使用的账号也会被一并出售"
+            android:textColor="#FF3939"
+            android:textSize="12sp"
+            android:drawableStart="@mipmap/ic_authentication_gth"
+            android:drawablePadding="7dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="12dp"
+            android:background="#222222"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:gravity="center"
+                android:text="发布"
+                android:textColor="#402802"
+                android:textSize="14sp"
+                android:background="@drawable/shape_radius18_ffd497_fafbf5"/>
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sl_scroll"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_border_shape">
+
+                    <TextView
+                        android:id="@+id/tv_order_state"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请描述一下您的账号"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_hint"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_order_state"
+                        app:layout_constraintStart_toEndOf="@+id/tv_order_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:visibility="invisible"
+                        android:text="0/200"
+                        android:textColor="#626262"
+                        android:textSize="11sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_specific_situation_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_order_state"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="*"
+                            android:textColor="#FF4646"
+                            android:textSize="15sp"/>
+                        <EditText
+                            android:id="@+id/tv_specific_situation_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:gravity="left"
+                            android:background="@drawable/shape_radius10_323335"
+                            android:minLines="2"
+                            android:maxLines="200"
+                            android:hint="请输入标题"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#626262"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_specific_situation"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_specific_situation_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="*"
+                            android:textColor="#FF4646"
+                            android:textSize="15sp"/>
+                        <EditText
+                            android:id="@+id/tv_specific_situation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:gravity="left"
+                            android:background="@drawable/shape_radius10_323335"
+                            android:minLines="4"
+                            android:maxLines="200"
+                            android:maxLength="500"
+                            android:hint="请输入描述"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#626262"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_text1"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_specific_situation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="*"
+                            android:textColor="#FF4646"
+                            android:textSize="11sp"/>
+                        <TextView
+                            android:id="@+id/tv_text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="添加游戏资产截图更容易卖出"
+                            android:textColor="#C1C1C1"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_recycler"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_text1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_upload_img"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_border_shape">
+
+                    <TextView
+                        android:id="@+id/tv_text2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text3"
+                        app:layout_constraintStart_toEndOf="@+id/tv_text2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="游戏账号"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/tv_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:background="@null"
+                        android:paddingRight="2dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:hint="请输入游戏账号"
+                        android:textColor="#888888"
+                        android:textColorHint="#626262"
+                        android:textSize="13sp"/>
+
+                    <View
+                        android:id="@+id/view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_text4"
+                        app:layout_constraintTop_toBottomOf="@+id/view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text5"
+                        app:layout_constraintStart_toEndOf="@+id/tv_text4"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="游戏区服"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_District_server"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:hint="请选择"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:drawablePadding="14dp"
+                        android:textColor="#888888"
+                        android:textColorHint="#626262"
+                        android:textSize="13sp"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_text6"
+                        app:layout_constraintTop_toBottomOf="@+id/view2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text7"
+                        app:layout_constraintStart_toEndOf="@+id/tv_text6"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="游戏参数"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_parameter"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:hint="去填写"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:drawablePadding="14dp"
+                        android:textColor="#888888"
+                        android:textColorHint="#626262"
+                        android:textSize="13sp"/>
+
+                    <View
+                        android:id="@+id/view3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_text8"
+                        app:layout_constraintTop_toBottomOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text9"
+                        app:layout_constraintStart_toEndOf="@+id/tv_text8"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="账号售价"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        app:layout_constraintTop_toTopOf="@+id/tv_text8"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:hint="￥0.00"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:drawablePadding="14dp"
+                        android:textColor="#FF4646"
+                        android:textColorHint="#FF4646"
+                        android:textSize="13sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_agreement"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_to_login"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_check_f"/>
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="center"
+                        android:text="我已阅读并同意《卖家出售协议》"
+                        android:textColor="#888888"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

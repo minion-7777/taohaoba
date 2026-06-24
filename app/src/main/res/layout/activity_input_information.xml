@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="录入信息"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@color/page_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl2"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/gradient_border_shape"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/tv_txta"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#FF4646"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_name_tip"
+                    app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="出售游戏"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical|right"
+                    android:drawablePadding="14dp"
+                    android:background="@null"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_name_tip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <View
+                    android:id="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_txta"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#393B3D"/>
+
+                <TextView
+                    android:id="@+id/tv_txtc"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#FF4646"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_account_tip"
+                    app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                    app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="游戏账号"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/et_account"
+                    app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请填写游戏账号"
+                    android:drawableRight="@mipmap/ic_jt"
+                    android:drawablePadding="14dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#626262"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:id="@+id/view1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_txtc"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#393B3D"/>
+
+                <TextView
+                    android:id="@+id/tv_txte"
+                    app:layout_constraintTop_toBottomOf="@+id/view1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="*"
+                    android:textColor="#FF4646"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_txtf"
+                    app:layout_constraintStart_toEndOf="@+id/tv_txte"
+                    app:layout_constraintTop_toTopOf="@+id/tv_txte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="出售价格"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/et_price"
+                    app:layout_constraintTop_toTopOf="@+id/tv_txte"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请填写价格"
+                    android:textColorHint="#626262"
+                    android:text=""
+                    android:textColor="#ff0000"
+                    android:textSize="15sp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#402802"
+                android:textSize="14sp"
+                android:background="@drawable/shape_radius18_ffd497_fafbf5"
+                android:layout_above="@id/layout_seller_sale_agreement"
+                />
+
+            <LinearLayout
+                android:id="@+id/layout_seller_sale_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提交即代表同意"
+                    android:textColor="#888888"
+                    android:textSize="11sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_seller_sale_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《卖家出售协议》"
+                    android:textColor="#EACA92"
+                    android:textSize="11sp"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

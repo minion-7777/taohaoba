@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="11dp"
+    android:paddingBottom="11dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <io.openim.android.ouicore.widget.AvatarImage
+            android:id="@+id/avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_my_friend" />
+
+        <TextView
+            android:id="@+id/identity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/shape_radius2_5_fe5555"
+            android:text="identity"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:layout_marginLeft="7dp"
+            />
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxWidth="220dp"
+            android:layout_marginLeft="6dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/action"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="私聊客服"
+            android:textColor="#EACA92"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_radius15_line_eaca92"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+

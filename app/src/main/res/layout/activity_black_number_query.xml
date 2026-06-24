@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="黑号查询"/>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="11dp"
+                    android:hint="请输入需要查询的号码"
+                    android:textColor="#ABABAB"
+                    android:textSize="13sp"
+                    android:textColorHint="#ABABAB"
+                    android:paddingLeft="14dp"
+                    android:inputType="phone"
+                    android:background="@drawable/gradient_border_shape"/>
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="31.5dp"
+                    android:text="查询"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#402802"
+                    android:gravity="center"
+                    android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="42dp"
+                    android:text="什么是黑号查询？"
+                    android:textColor="#FFFFFE"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="输入交易对象的QQ、支付宝、微信等，显示被拉黑就说明存在诈骗或被 找回！不建议继续交易"
+                    android:textColor="#B7B7B7"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

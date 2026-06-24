@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="34dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="黑号查询报告"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_close"
+            android:padding="12dp"
+            android:layout_gravity="right"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="查询号码：54456464654"
+        android:textColor="#9C9C9C"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="查询时间：2024-12-54 12:54:20"
+        android:textColor="#9C9C9C"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="查询结果："
+        android:textColor="#9C9C9C"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="经检测，此号码未受过拉黑处理！"
+        android:textColor="#EACA92"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="#402802"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+</LinearLayout>

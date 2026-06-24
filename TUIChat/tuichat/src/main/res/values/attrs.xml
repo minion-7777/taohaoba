@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="chat_camera_icon_size" format="dimension" />
+    <attr name="chat_camera_icon_margin" format="dimension" />
+    <attr name="chat_camera_icon_src" format="reference" />
+    <attr name="chat_camera_icon_left" format="reference" />
+    <attr name="chat_camera_icon_right" format="reference" />
+    <attr name="chat_camera_duration_max" format="integer" />
+
+    <declare-styleable name="ChatCameraView">
+        <attr name="chat_camera_icon_size" />
+        <attr name="chat_camera_icon_margin" />
+        <attr name="chat_camera_icon_src" />
+        <attr name="chat_camera_icon_left" />
+        <attr name="chat_camera_icon_right" />
+        <attr name="chat_camera_duration_max" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <!-- 圆角半径 -->
+        <attr name="cornerRadius" format="dimension" />
+        <!-- 可选：单独控制四个角的圆角 -->
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

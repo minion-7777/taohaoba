@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+<!--        <item name="android:navigationBarColor">#141414</item> &lt;!&ndash; 设置底部导航栏 &ndash;&gt;-->
+        <!-- 状态栏透明 -->
+
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <!-- 导航栏透明 -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <!-- 内容延伸至系统栏区域 -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+
+</resources>

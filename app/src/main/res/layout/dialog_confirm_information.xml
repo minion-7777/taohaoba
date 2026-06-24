@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="30dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="确认信息"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_close"
+            android:padding="12dp"
+            android:layout_gravity="right"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:text="请确认以下信息是否正确"
+        android:textColor="#9C9C9C"
+        android:textSize="12sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_smrz"
+        app:layout_constraintTop_toBottomOf="@+id/tv_warn"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient_border_shape"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_txta"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF4646"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_txtb"
+            app:layout_constraintStart_toEndOf="@+id/tv_txta"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="真实姓名"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/et_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right"
+            android:background="@null"
+            android:paddingRight="2dp"
+            android:hint="请输入真实姓名"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#ff888888"
+            android:textSize="14sp"
+            android:text=""
+            />
+
+        <View
+            android:id="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_txta"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#393B3D"/>
+
+        <TextView
+            android:id="@+id/tv_txtc"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="*"
+            android:textColor="#FF4646"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_txtd"
+            app:layout_constraintStart_toEndOf="@+id/tv_txta"
+            app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="身份证号"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/et_id_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right"
+            android:background="@null"
+            android:paddingRight="2dp"
+            android:hint="请输入身份证号"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#ff888888"
+            android:textSize="14sp"
+            android:text=""
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="#402802"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+</LinearLayout>

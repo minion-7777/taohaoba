@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_border_shape"
+    android:paddingTop="13dp"
+    android:paddingBottom="17dp"
+    android:paddingLeft="11dp"
+    android:paddingRight="13dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_pass_through"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="审核通过，已放款"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#888888"
+        android:textSize="11sp"
+        android:text="2025-03-10 15:00"/>
+
+    <TextView
+        android:id="@+id/tv_revenue_collection"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:textColor="#EACA92"
+        android:textSize="15sp"
+        android:text="￥0.00"/>
+
+    <LinearLayout
+        android:id="@+id/ll_txfs"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付宝"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="提现方式"
+            android:textColor="#888888"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_withdrawal_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2201324565"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="提现单号"
+            android:textColor="#888888"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="提现来源"
+            android:textColor="#888888"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_type"
+        app:layout_constraintTop_toBottomOf="@+id/ll_txfs"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#525357"/>
+
+        <TextView
+            android:id="@+id/tv_textname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="原因："
+            android:textColor="#FA3B3B"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

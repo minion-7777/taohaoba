@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="修改手机号"/>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:drawableLeft="@mipmap/ic_change_phone"
+                    android:drawablePadding="8dp"
+                    android:text="新手机号"/>
+
+                <EditText
+                    android:id="@+id/et_new_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="11dp"
+                    android:hint="请输入手机号"
+                    android:textColor="#ABABAB"
+                    android:textSize="13sp"
+                    android:textColorHint="#ABABAB"
+                    android:paddingLeft="14dp"
+                    android:inputType="phone"
+                    android:background="@drawable/gradient_border_shape"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:drawableLeft="@mipmap/ic_change_phone"
+                    android:drawablePadding="8dp"
+                    android:text="确认手机号"/>
+
+                <EditText
+                    android:id="@+id/et_confirm_new_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="11dp"
+                    android:hint="请再次确认新手机号"
+                    android:textColor="#ABABAB"
+                    android:textSize="13sp"
+                    android:textColorHint="#ABABAB"
+                    android:paddingLeft="14dp"
+                    android:inputType="phone"
+                    android:background="@drawable/gradient_border_shape"/>
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="确认修改"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#402802"
+                    android:gravity="center"
+                    android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

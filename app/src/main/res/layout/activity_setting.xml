@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="设置"/>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_border_shape"
+                    android:padding="12dp">
+
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="头像"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_jt"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_jt"/>
+
+                    <io.openim.android.taohaoba.widgets.CircleImageView
+                        android:id="@+id/ivHead"
+                        app:layout_constraintRight_toLeftOf="@+id/iv_jt"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_profile_picture"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gradient_border_shape"
+                    android:orientation="vertical"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="昵称"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/ic_jt"
+                            android:text=""
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_change_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手机号"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:text="登录密码管理"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QQ"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/ic_jt"
+                            android:text="点击此处去填写QQ"
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:visibility="gone"
+                        android:background="#393B3D"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="微信"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/ic_jt"
+                            android:text="未填写"
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gradient_border_shape"
+                    android:orientation="vertical"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/llRenzhengzhongxin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实名认证"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/ic_jt"
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_push_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:text="推送设置"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:text="关于我们"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_account_cancellation"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:text="账户注销"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clVersionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="检查新版本"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:id="@+id/tvVersionName"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@mipmap/ic_jt"
+                            android:text="版本号v1.0.0"
+                            android:textColor="#ABABAB"
+                            android:textSize="13sp"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_login_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="退出账号"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#402802"
+                    android:gravity="center"
+                    android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

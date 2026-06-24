@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="实人认证"/>
+
+       <androidx.core.widget.NestedScrollView
+           app:layout_constraintTop_toBottomOf="@+id/toolbar"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="0dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="80dp"
+                   android:layout_marginLeft="58dp"
+                   android:layout_marginRight="58dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/tv_portrait"
+                       android:layout_width="match_parent"
+                       android:layout_height="161dp"
+                       android:text="上传身份证人像页照片"
+                       android:textColor="#626262"
+                       android:textSize="12sp"
+                       android:gravity="center"
+                       android:drawableTop="@mipmap/ic_photo"
+                       android:drawablePadding="15dp"
+                       android:paddingTop="22dp"
+                       android:background="@drawable/shape_radius10_dashed_line_242527"/>
+
+                   <io.openim.android.taohaoba.widgets.RoundImageView
+                       android:id="@+id/iv_portrait"
+                       android:visibility="gone"
+                       android:layout_width="match_parent"
+                       android:layout_height="161dp"
+                       android:scaleType="fitCenter"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="80dp"
+                   android:layout_marginLeft="58dp"
+                   android:layout_marginRight="58dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/tv_national_emblem"
+                       android:layout_width="match_parent"
+                       android:layout_height="161dp"
+                       android:text="上传身份证国徽页照片"
+                       android:textColor="#626262"
+                       android:textSize="12sp"
+                       android:gravity="center"
+                       android:drawableTop="@mipmap/ic_photo"
+                       android:drawablePadding="15dp"
+                       android:paddingTop="22dp"
+                       android:background="@drawable/shape_radius10_dashed_line_242527"
+                       />
+
+                   <io.openim.android.taohaoba.widgets.RoundImageView
+                       android:id="@+id/iv_national_emblem"
+                       android:layout_width="match_parent"
+                       android:visibility="gone"
+                       android:layout_height="161dp"
+                       android:scaleType="fitCenter"/>
+
+               </LinearLayout>
+
+
+               <TextView
+                   android:id="@+id/tv_submit"
+                   android:layout_width="match_parent"
+                   android:layout_marginTop="80dp"
+                   android:layout_height="40dp"
+                   android:layout_marginBottom="56dp"
+                   android:layout_marginLeft="38dp"
+                   android:layout_marginRight="38dp"
+                   android:gravity="center"
+                   android:text="提交"
+                   android:textColor="#402802"
+                   android:textSize="14sp"
+                   android:background="@drawable/shape_radius18_ffd497_fafbf5"
+                   />
+           </LinearLayout>
+       </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

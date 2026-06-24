@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/page_color">
+
+        <RelativeLayout
+            android:id="@+id/layout_msg_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="消息"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/iv_msg_setting"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/ic_setting"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:id="@+id/iv_msg_clean"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/ic_clean"
+                android:layout_toLeftOf="@id/iv_msg_setting"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            />
+<!--            app:layout_constraintTop_toBottomOf="@id/layout_msg_title"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+
+    </LinearLayout>
+
+</layout>

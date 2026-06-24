@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:id="@+id/ll_item"
+    android:background="@drawable/gradient_border_shape1">
+
+    <LinearLayout
+        android:id="@+id/llsta"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="98dp"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_coupon_a"
+        android:paddingTop="6dp"
+        android:paddingBottom="11dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#F5DAB3"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/tv_coupon_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#F5DAB3"
+                android:textSize="30sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_coupon_amount_minimum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="满500可用"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toEndOf="@+id/llsta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/ic_coupon_b"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_coupon_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ll_but"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="包赔券"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#402802"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_coupon_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ll_but"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="有效期至2025-9-27"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#402802"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_but"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_but"
+                android:layout_marginEnd="9dp"
+                android:layout_width="75dp"
+                android:layout_height="28dp"
+                android:background="@drawable/gradient_border_shape2"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="立即使用"
+                android:textColor="#F5DAB3"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_select"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@mipmap/ic_a_check_f"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:background="#80474749"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

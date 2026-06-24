@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_semicircle_radius10_242527">
+
+    <TextView
+        android:id="@+id/tv_zhpx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="综合排序"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:id="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_zhpx"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#4A4A4A"/>
+
+    <TextView
+        android:id="@+id/tv_jgjx"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="价格降序"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:id="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jgjx"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#4A4A4A"/>
+
+    <TextView
+        android:id="@+id/tv_jgsx"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="价格升序"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:id="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_jgsx"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#4A4A4A"/>
+
+    <TextView
+        android:id="@+id/tv_sjjx"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="时间降序"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+
+    <View
+        android:id="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sjjx"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#4A4A4A"/>
+
+    <TextView
+        android:id="@+id/tv_sjsx"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="时间升序"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

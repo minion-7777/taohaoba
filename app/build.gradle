@@ -1,0 +1,270 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+//    id 'com.huawei.agconnect'
+//    id 'com.hihonor.mcs.asplugin'
+}
+
+android {
+    compileSdk rootProject.ext.androidConfig.compileSdk
+
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        minSdk rootProject.ext.androidConfig.minSdk
+        targetSdk rootProject.ext.androidConfig.targetSdk
+        applicationId "com.ranranlanyan.taohaoba"
+        versionCode rootProject.ext.androidConfig.versionCode
+        versionName rootProject.ext.androidConfig.versionName
+        multiDexEnabled = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        ndk {
+//            rootProject.ext.androidConfig.abiFilters
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            //魅族打包需要去掉'armeabi', 'armeabi-v7a'方式
+            abiFilters 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                //从 3.1.2.0 版本开始，APPID 占位符从 GETUI_APP_ID 切换为 GETUI_APPID
+                GETUI_APPID : "xzdsM5fySiAMvJCd0wdcn1",
+//                // 华为 相关应用参数
+//                HUAWEI_APP_ID  : "115535501",
+//                // 小米相关应用参数
+//                XIAOMI_APP_ID  : "2882303761520417996",
+//                XIAOMI_APP_KEY : "5742041711996",
+//                // OPPO 相关应用参数
+//                OPPO_APP_KEY   : "c6dda8a3e46c43f983009fb4baae003a",
+//                OPPO_APP_SECRET: "e753499b11d24cebaf2a450a864b66f8",
+//                // VIVO 相关应用参数
+//                VIVO_APP_ID    : "105909577",
+//                VIVO_APP_KEY   : "970e0eade6b1d6e3239cdadad909eb10",
+//                // 荣耀相关应用参数
+//                HONOR_APP_ID   : "104506431",
+                GT_INSTALL_CHANNEL : "getui",
+                "VIVO_APPKEY"     : "970e0eade6b1d6e3239cdadad909eb10",
+                "VIVO_APPID"      : "105909577",
+                "HONOR_APPID"     : "104506431"
+        ]
+    }
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    signingConfigs {
+        config {
+            storeFile file(properties.getProperty("keystroe_storeFile"))
+            storePassword properties.getProperty("keystroe_storePassword")
+            keyAlias properties.getProperty("keystroe_keyAlias")
+            keyPassword properties.getProperty("keystroe_keyPassword")
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.config
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "channel"
+    // 定义渠道维度
+    productFlavors {
+        xiaomi {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "xiaomi"]
+        }
+        honor {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "honor"]
+        }
+        huawei {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "huawei"]
+        }
+        vivo {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "vivo"]
+        }
+        oppo {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "oppo"]
+        }
+        website {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "website"]
+        }
+        meizu {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "meizu"]
+        }
+        baidu {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "baidu"]
+        }
+        yingyongbao {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "yingyongbao"]
+        }
+        _360 {
+            dimension "channel"
+            manifestPlaceholders = [CHANNEL_NAME: "360"]
+        }
+        // … 可继续添加其他渠道 …
+    }
+
+//    // 仅保留特定渠道的 debug 变体
+//    variantFilter { variant ->
+//        // 条件：构建类型为 debug，且渠道不是目标渠道（例如 "huawei"）
+//        if (variant.buildType.name == 'debug') { // 'huawei' 可替换为需保留的渠道名
+//            setIgnore(true) // 忽略非目标渠道的 debug 变体
+//        }
+//    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/*.md'
+        exclude 'META-INF/*.properties'
+        // 新增：排除签名文件和 Kotlin 模块描述文件
+        exclude 'META-INF/*.SF'        // 排除签名文件
+        exclude 'META-INF/*.RSA'       // 排除签名证书
+        exclude 'META-INF/*.kotlin_module' // 排除 Kotlin 模块文件
+        exclude 'META-INF/INDEX.LIST'  // 排除索引文件
+        exclude 'META-INF/maven/**'    // 排除 Maven 元数据目录
+        // 解决重复文件冲突：保留第一个找到的 public-suffix-list.txt
+        pickFirst 'mozilla/public-suffix-list.txt'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${rootProject.ext.versions.androidx_lifecycle}"
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:3.0.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    implementation 'com.alibaba:arouter-api:1.5.2'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    implementation 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
+
+    implementation 'com.github.czy1121:badgebutton:1.1.0'
+    implementation 'com.hbb20:ccp:2.6.1'
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation "com.google.firebase:firebase-messaging" // FCM
+    implementation "com.google.firebase:firebase-analytics" // Optional for FCM
+    //--------
+    api project(':OUICore')
+    api project(':tuicore')
+    api project(':timcommon')
+    api project(':tuichat')
+    api project(':tuicontact')
+    api project(':tuiconversation')
+    api project(':tuimultimediaplugin')
+
+    //RecyclerView适配器
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14"
+    //banner
+    implementation 'com.youth.banner:banner:2.1.0'
+    // 如果需要图片加载功能，添加Glide或Picasso
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //tabLayout插件
+    implementation 'io.github.h07000223:flycoTabLayout:3.0.0'
+    //xPop
+    implementation 'com.github.li-xiaojun:XPopup:2.10.0'
+    // mmkv
+    implementation 'com.tencent:mmkv:1.2.14'
+    //上下拉刷新
+    def smartRefresh = "2.0.1"
+    implementation "com.scwang.smart:refresh-layout-kernel:$smartRefresh"
+    // 谷歌刷新头
+    implementation "com.scwang.smart:refresh-header-material:$smartRefresh"
+    // 经典刷新
+    implementation "com.scwang.smart:refresh-header-classics:$smartRefresh"
+    // 水滴屏适配
+    implementation 'com.github.smarxpan:NotchScreenTool:0.0.1'
+    //阿里云图片上传
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.21'
+    //相册选择
+    // PictureSelector 基础 (必须)
+    // 添加 PictureSelector 并排除冲突的 UCrop
+    implementation("io.github.lucksiege:pictureselector:v3.11.2") {
+        exclude group: 'com.github.yalantis', module: 'ucrop'
+    }
+    //支付宝支付
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+    //版本更新
+    implementation 'com.github.jenly1314.AppUpdater:app-updater:1.2.0'
+    implementation 'top.zibin:Luban:1.1.8' // 使用最新版本
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    //侧滑删除
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    //图片预览缩放
+    implementation 'com.byc:ImageWatcher:1.1.0'
+    implementation 'com.getui:gtc:3.2.18.0'  //个推核心组件
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'commons-codec:commons-codec:1.6'
+    // 添加 AndroidX 注解库（兼容 AndroidX 项目）
+    implementation 'androidx.annotation:annotation:1.3.0'
+    //个推运营工具sdk
+    implementation 'com.getui:gsido:1.4.12.0'
+    // webview
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx'
+
+    // 集成消息推送插件，从 7.6 版本开始支持
+//    implementation ('com.tencent.timpush:timpush:8.7.7201') {
+//        exclude group: 'com.tencent.liteav.tuikit', module: 'tuicore' // 排除外部tuicore
+//    }
+    implementation 'com.tencent.timpush:timpush:8.7.7201'
+    implementation 'com.tencent.liteav.tuikit:tuicore:8.7.7201'
+    // 按需集成对应厂商推送包
+    api 'com.tencent.timpush:fcm:8.7.7201'
+    implementation 'com.tencent.timpush:xiaomi:8.7.7201'
+    implementation 'com.tencent.timpush:meizu:8.7.7201'
+    implementation 'com.tencent.timpush:oppo:8.7.7201'
+    implementation 'com.tencent.timpush:vivo:8.7.7201'
+    implementation 'com.tencent.timpush:huawei:8.7.7201'
+    implementation 'com.tencent.timpush:honor:8.7.7201'
+}
+

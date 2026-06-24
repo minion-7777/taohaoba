@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:paddingTop="20dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="34dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="安全验证"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="本次操作需要进行安全验证，请点击获取验证 码，并使用******接收验证码进行验证"
+        android:textColor="#ffffff"
+        android:textSize="14sp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="29dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_verification_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="请输入验证码"
+            android:textColor="#ABABAB"
+            android:textSize="13sp"
+            android:textColorHint="#ABABAB"
+            android:drawableLeft="@mipmap/ic_pwd"
+            android:drawablePadding="11dp"
+            android:paddingLeft="14dp"
+            android:inputType="number"
+            android:background="@drawable/gradient_border_shape"/>
+
+        <TextView
+            android:id="@+id/tv_send"
+            app:layout_constraintTop_toTopOf="@+id/et_verification_code"
+            app:layout_constraintEnd_toEndOf="@+id/et_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="发送验证码"
+            android:textColor="#EACA92"
+            android:textSize="14sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#402802"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:background="@drawable/shape_radius22_5_ffd497_fafbf5"/>
+
+</LinearLayout>

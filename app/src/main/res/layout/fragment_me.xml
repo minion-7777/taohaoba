@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dp">
+
+            <ImageView
+                android:id="@+id/iv_me_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_me_bg"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_head"
+                app:layout_constraintTop_toBottomOf="@+id/iv_me_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingLeft="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <io.openim.android.taohaoba.widgets.CircleImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_sell_number"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_head"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="往事随风"
+                    android:textColor="#FFFFFE"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_liebiao"
+                    app:layout_constraintLeft_toRightOf="@+id/iv_head"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center"
+                    app:layout_constraintWidth_percent="0.33">
+
+                    <LinearLayout
+                        android:id="@+id/ll_shoucang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收藏"
+                            android:textColor="#C0C0C0"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_collect_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="0"
+                            android:textColor="#EACA92"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="15dp"
+                        android:background="#5C5C5C"
+                        android:layout_marginLeft="20dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_guanzhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="17dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关注"
+                            android:textColor="#C0C0C0"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="28"
+                            android:textColor="#EACA92"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:padding="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_setting"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_wallet"
+                app:layout_constraintTop_toBottomOf="@+id/cl_head"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingLeft="16.5dp"
+                android:paddingRight="15dp"
+                android:paddingTop="17.5dp"
+                android:paddingBottom="19.5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/ic_crad_bg">
+
+                <TextView
+                    android:id="@+id/tv_wodeqianbao"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的钱包"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_wodeqianbao_xiangqing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@mipmap/ic_jr"
+                    android:drawablePadding="6.5dp"
+                    android:text="详情"
+                    android:textColor="#402802"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_zhanghuyuer"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_wodeqianbao"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="账户余额(元)"
+                    android:textColor="#402802"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_zhanghuyuer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:textStyle="bold"
+                    android:text="*****"
+                    android:textColor="#402802"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/tv_Withdrawal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_radius15_1c1c1e"
+                    android:textStyle="bold"
+                    android:text="提现"
+                    android:textColor="#EACA92"
+                    android:textSize="13sp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_youhuiquan"
+                app:layout_constraintTop_toBottomOf="@+id/cl_wallet"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="19dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gradient_border_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                    android:id="@+id/cYouhuiquan"
+                    android:layout_weight="1"
+                    app:customIcon1="@mipmap/ic_coupon"
+                    app:customText="优惠券"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                    android:id="@+id/ll_huodonzhoxin"
+                    android:layout_weight="1"
+                    app:customIcon1="@mipmap/ic_heihaochaxun"
+                    app:customText="活动中心"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_buy"
+                app:layout_constraintTop_toBottomOf="@+id/ll_youhuiquan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="19dp"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_border_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="我买的"
+                    android:textColor="#FFFFFE"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_buy_quanbu"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_daifahuo"
+                        app:customText="全部"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_buy_daifukuan"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_daifukuan"
+                        app:customText="待付款"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_buy_jiaoyizhong"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_jiaoyizho_a"
+                        app:customText="交易中"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_buy_yiwancheng"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_yiwancheng"
+                        app:customText="已完成"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_buy_yiquxiao"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_yiquxiao"
+                        app:customText="已取消"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_commercially_available"
+                app:layout_constraintTop_toBottomOf="@+id/ll_my_buy"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="19dp"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_border_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="我卖的"
+                    android:textColor="#FFFFFE"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_sell_quanbu"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_daifahuo"
+                        app:customText="全部"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_sell_daifukuan"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_daifukuan"
+                        app:customText="待付款"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_sell_jiaoyizhong"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_jiaoyizho_a"
+                        app:customText="交易中"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_sell_yiwancheng"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_chushou"
+                        app:customText="已出售"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_sell_yiquxiao"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_yiquxiao"
+                        app:customText="已取消"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_goods"
+                app:layout_constraintTop_toBottomOf="@+id/ll_my_commercially_available"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="19dp"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_border_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="我的商品"
+                    android:textColor="#FFFFFE"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_quanbu"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_daifahuo"
+                        app:customText="全部"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_yishangjia"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_yishangjia"
+                        app:customText="已上架"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_yixiajia"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_yixiajia"
+                        app:customText="已下架"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_shenhezhong"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_shenhezho"
+                        app:customText="审核中"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_shenheshibai"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_jiaoyizho"
+                        app:customText="审核失败"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+<!--                    <View-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_more_services"
+                app:layout_constraintTop_toBottomOf="@+id/ll_my_goods"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="19dp"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_border_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="更多服务"
+                    android:textColor="#FFFFFE"
+                    android:textSize="17sp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="12.5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_liangxikefu"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_kefu"
+                        app:customText="联系客服"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_renzhengzhongxin"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_renzhengzhongxin"
+                        app:customText="认证中心"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_shouhouzhoxin"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_heihaochaxun"
+                        app:customText="售后中心"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <io.openim.android.taohaoba.widgets.CustomMeButtonView
+                        android:id="@+id/ll_help_center"
+                        android:layout_weight="1"
+                        app:customIcon1="@mipmap/ic_bzzx"
+                        app:customText="帮助中心"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+<!--                    <io.openim.android.taohaoba.widgets.CustomMeButtonView-->
+<!--                        android:id="@+id/ll_heihaochaxun"-->
+<!--                        android:layout_weight="1"-->
+<!--                        app:customIcon1="@mipmap/ic_heihaochaxun"-->
+<!--                        app:customText="黑号查询"-->
+<!--                        android:visibility="invisible"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

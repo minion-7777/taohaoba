@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/page_color">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_home_bg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="17sp"
+        android:text="卖账号"
+        android:textColor="@color/white"/>
+
+    <io.openim.android.taohaoba.widgets.RoundImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cornerRadius="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <LinearLayout
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_sell_number"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@mipmap/ic_dialog_close"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

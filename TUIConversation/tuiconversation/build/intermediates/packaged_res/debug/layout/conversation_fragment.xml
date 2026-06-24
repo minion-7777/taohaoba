@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_color">
+
+    <RelativeLayout
+        android:id="@+id/layout_msg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="消息"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/iv_push_setting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_setting"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/iv_msg_clean_all"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_clean"
+            android:layout_toLeftOf="@id/iv_push_setting"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_rectangle_backgroud_conversation"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:id="@+id/conversation_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="全部"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/color_D6D6D6"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            />
+
+        <TextView
+            android:id="@+id/conversation_single"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:text="客服聊天"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/color_D6D6D6"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            />
+        <TextView
+            android:id="@+id/conversation_group"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="交易群"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/color_D6D6D6"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoPermission"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="您未开启通知权限，将收不到系统通知消息，请开启权限"
+        android:textSize="10sp"
+        android:textColor="#EACA92"
+        android:background="@drawable/shape_radius10_33eaca92"/>
+
+    <com.tencent.qcloud.tuikit.tuiconversation.classicui.widget.ConversationLayout
+        android:id="@+id/conversation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_border_shape"
+        android:overScrollMode="never"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="50dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

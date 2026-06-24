@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="chat_background_color">#FFFFFF</color>
+
+    <color name="chat_bubble_other_color">#ECECEC</color>
+    <color name="chat_bubble_self_color">#DCEAFD</color>
+
+    <color name="chat_title_line_color">#E6E6E6</color>
+    <color name="input_title_line_color">#D2D2D2</color>
+
+    <color name="voice_pressed">#DEDEDE</color>
+    <color name="voice_normal">#ffffff</color>
+
+    <color name="chat_text_color">#000000</color>
+    <color name="chat_message_bubble_bg_stoke_color">#DDDDDD</color>
+
+    <color name="reply_preview_text_color">#EBF0F6</color>
+    <color name="reply_msg_sender_text_color">#FF888888</color>
+    <color name="reply_msg_abstract_text_color">#FF888888</color>
+
+    <color name="reply_abstract_bg">#0D444444</color>
+    <color name="reply_abstract_line_bg">#1A444444</color>
+    <color name="reply_msg_text">#FF888888</color>
+
+    <color name="order_message_color">#FF7201</color>
+    <color name="window_background_color">#BF000000</color>
+
+    <color name="tuiemoji_divide_line_bg_color">#1A000000</color>
+
+    <color name="tuichat_face_view_bg">#EBF0F6</color>
+    <color name="contact_profile_btn_pressed_color">#E6E9EB</color>
+
+    <color name="group_minimalist_profile_item_bg_color">#F0F9F9F9</color>
+    <color name="group_minimalist_profile_item_warning_text_color">#FFFF584C</color>
+
+    <color name="contact_minimalist_profile_item_bg_color">#F0F9F9F9</color>
+    <color name="contact_minimalist_profile_item_warning_text_color">#FFFF584C</color>
+    <color name="contact_line_controller_color">#F0F9F9F9</color>
+    <color name="page_color">#201D19</color>
+    <color name="color_EACA92">#EACA92</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_242527">#242527</color>
+    <color name="color_402802">#402802</color>
+    <color name="color_D6D6D6">#D6D6D6</color>
+    <color name="color_FF4646">#FF4646</color>
+    <color name="color_FF9212">#FF9212</color>
+    <color name="color_0EB272">#0EB272</color>
+    <color name="color_CBCBCB">#CBCBCB</color>
+    <color name="color_2EA4FF">#2EA4FF</color>
+    <color name="color_FE5555">#FE5555</color>
+    <color name="color_3798EA">#3798EA</color>
+    <color name="color_52514F">#52514F</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

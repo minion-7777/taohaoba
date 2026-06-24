@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_border_shape"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_tag"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号：465464564654"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="#888888"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_tag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:layout_margin="0.5dp"
+        android:text="审核中"
+        android:textSize="12sp"
+        android:textColor="#FF4646"
+        android:background="@drawable/shape_semicircle_radius10_ff4646"/>
+
+    <io.openim.android.taohaoba.widgets.RoundImageView
+        android:id="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tag"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="17.5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:corner_radius="10dp"
+        android:src="@mipmap/ic_me_bg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        app:layout_constraintStart_toEndOf="@+id/iv_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:minLines="2"
+        android:ellipsize="end"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_area_code"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中国 浙江 杭州"
+        android:layout_marginTop="8dp"
+        android:textColor="#888888"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_goodsPrice"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintTop_toBottomOf="@+id/tv_area_code"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥0.00"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@+id/tv_area_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实付款￥976.00"
+        android:layout_marginTop="8dp"
+        android:textColor="#FF4646"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_operation"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="22.5dp"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="13dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancelAfterSales"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#EACA92"
+            android:text="取消申请"
+            android:visibility="gone"
+            android:background="@drawable/shape_radius15_line_eaca92"/>
+
+        <TextView
+            android:id="@+id/tv_contactCustomerService"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#EACA92"
+            android:text="联系客服"
+            android:visibility="gone"
+            android:background="@drawable/shape_radius15_line_eaca92"/>
+
+        <TextView
+            android:id="@+id/tv_applyForAfterSales"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#402802"
+            android:text="申请售后"
+            android:visibility="gone"
+            android:background="@drawable/shape_radius15_ffd497_fafbf5"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

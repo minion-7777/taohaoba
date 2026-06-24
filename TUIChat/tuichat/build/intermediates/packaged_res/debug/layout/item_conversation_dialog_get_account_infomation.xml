@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="游戏账号"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/et_game_account"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center|right"
+        android:drawableRight="@mipmap/ic_copy"
+        android:drawablePadding="10dp"
+        android:background="@null"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

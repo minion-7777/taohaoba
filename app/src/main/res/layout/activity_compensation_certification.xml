@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_color">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_bg"
+            android:scaleType="centerCrop"/>
+
+        <io.openim.android.taohaoba.widgets.TitleToolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:textTitle="包赔认证"/>
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_text1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完善资料"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_text2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:text="出售快 提现早"
+                    android:textColor="#FEE0B3"
+                    android:textSize="15sp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gradient_border_shape"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_point_to"/>
+
+                    <TextView
+                        android:id="@+id/tv_text3"
+                        app:layout_constraintStart_toEndOf="@+id/iv_img1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="商品展示“已提交安全资料”特殊标签，成交率提高，更快卖出"
+                        android:textColor="#858585"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_point_to"/>
+
+                    <TextView
+                        android:id="@+id/tv_text4"
+                        app:layout_constraintStart_toEndOf="@+id/iv_img2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="交易速度提高50%，更快提现"
+                        android:textColor="#858585"
+                        android:textSize="12sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl2"
+                    app:layout_constraintTop_toBottomOf="@+id/cl1"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/gradient_border_shape"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_txta"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_txtb"
+                        app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="紧急联系人姓名"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:drawablePadding="14dp"
+                        android:hint="点击获取联系方式"
+                        android:textColor="#888888"
+                        android:textColorHint="#626262"
+                        android:textSize="13sp"/>
+
+                    <View
+                        android:id="@+id/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_txta"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_txtc"
+                        app:layout_constraintTop_toBottomOf="@+id/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_txtd"
+                        app:layout_constraintStart_toEndOf="@+id/tv_txta"
+                        app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="紧急联系人电话"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        app:layout_constraintTop_toTopOf="@+id/tv_txtc"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:hint="点击获取联系方式"
+                        android:drawableRight="@mipmap/ic_jt"
+                        android:drawablePadding="14dp"
+                        android:textColor="#888888"
+                        android:textColorHint="#626262"
+                        android:textSize="13sp"/>
+
+                    <View
+                        android:id="@+id/view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_txtc"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#393B3D"/>
+
+                    <TextView
+                        android:id="@+id/tv_txte"
+                        app:layout_constraintTop_toBottomOf="@+id/view1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_txtf"
+                        app:layout_constraintStart_toEndOf="@+id/tv_txte"
+                        app:layout_constraintTop_toTopOf="@+id/tv_txte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="授权定位用于包赔认证"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_not_obtained"
+                        app:layout_constraintTop_toTopOf="@+id/tv_txte"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical|right"
+                        android:text="未获取"
+                        android:textColor="#FDE0B4"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text5"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_not_obtained"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_radius10_33eaca92"
+                        android:padding="12dp"
+                        android:text="1.请填写除本人外的其他亲人或朋友联系方式，信息务必真实有效；\n2.联系人姓名必须为真实姓名，不能是代称；\n3.此信息仅用于账号交易审核，平台将严格保护您的隐私，绝不无故泄露。"
+                        android:textColor="#EACA92"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_txtg"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="#FF4646"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_txth"
+                        app:layout_constraintStart_toEndOf="@+id/tv_txtg"
+                        app:layout_constraintTop_toTopOf="@+id/tv_txtg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:text="网购或外卖订单"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text6"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_txtg"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_radius10_33eaca92"
+                        android:padding="12dp"
+                        android:text="1.提供至少一张2个月内已交易成功的订单截图；\n2.截图必须包含姓名、电话、地址、时间；\n3.地址不能是网吧、酒店等公告地址，不能打码。"
+                        android:textColor="#EACA92"
+                        android:textSize="10sp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_recycler"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="11dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_upload_img"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl3"
+                    app:layout_constraintTop_toBottomOf="@+id/cl2"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:background="@drawable/gradient_border_shape">
+
+                    <TextView
+                        android:id="@+id/tv_text7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备注（选填）"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text8"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="若订单无详细地址信息，请在备注补充详细地址"
+                        android:textColor="#858585"
+                        android:textSize="10sp"/>
+
+                    <EditText
+                        android:id="@+id/tv_specific_situation"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_text8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="12dp"
+                        android:gravity="left"
+                        android:background="@drawable/shape_radius10_323335"
+                        android:minLines="4"
+                        android:hint="请输入内容"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#626262"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_text9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0/200"
+                        android:visibility="invisible"
+                        android:layout_marginRight="13dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#858585"
+                        android:textSize="10sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_submit"
+                    app:layout_constraintTop_toBottomOf="@+id/cl3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:text="提交"
+                    android:textColor="#402802"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_radius18_ffd497_fafbf5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

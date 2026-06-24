@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:text="请选择取消原因"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+    <io.openim.android.taohaoba.widgets.RadioGroupEx
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="7dp"
+            android:layout_marginRight="50dp"
+            android:text="不想要了"
+            android:textColor="#989898"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="7dp"
+            android:layout_marginRight="50dp"
+            android:text="验号不符"
+            android:textColor="#989898"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="7dp"
+            android:layout_marginRight="50dp"
+            android:text="客服不处理问题"
+            android:textColor="#989898"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="7dp"
+            android:layout_marginRight="50dp"
+            android:text="卖家联系不上"
+            android:textColor="#989898"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:drawablePadding="7dp"
+            android:text="其他原因"
+            android:textColor="#989898"
+            android:textSize="12sp"/>
+
+    </io.openim.android.taohaoba.widgets.RadioGroupEx>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="暂不取消"
+            android:textColor="#FDE1B7"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_363739"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消订单"
+            android:textColor="#402802"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_ffd497_fafbf5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
