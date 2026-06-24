@@ -1,0 +1,67 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.qcloud.tuikit.timcommon" >
+4
+5    <uses-sdk android:minSdkVersion="19" />
+6
+7    <application>
+7-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:4:5-37:19
+8        <activity
+8-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:6:9-8:52
+9            android:name="com.tencent.qcloud.tuikit.timcommon.component.activities.SelectionActivity"
+9-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:7:13-102
+10            android:screenOrientation="portrait" />
+10-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:8:13-49
+11        <activity
+11-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:9:9-11:52
+12            android:name="com.tencent.qcloud.tuikit.timcommon.component.activities.ImageSelectActivity"
+12-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:10:13-104
+13            android:screenOrientation="portrait" />
+13-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:11:13-49
+14        <activity
+14-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:13:9-15:52
+15            android:name="com.tencent.qcloud.tuikit.timcommon.component.activities.SelectionMinimalistActivity"
+15-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:14:13-112
+16            android:screenOrientation="portrait" />
+16-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:15:13-49
+17        <activity
+17-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:16:9-18:52
+18            android:name="com.tencent.qcloud.tuikit.timcommon.component.activities.ImageSelectMinimalistActivity"
+18-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:17:13-114
+19            android:screenOrientation="portrait" />
+19-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:18:13-49
+20        <activity
+20-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:20:9-25:74
+21            android:name="com.tencent.qcloud.tuikit.timcommon.util.ActivityResultResolver$ActivityResultProxyActivity"
+21-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:20:19-125
+22            android:configChanges="orientation|keyboardHidden|screenSize"
+22-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:21:13-74
+23            android:launchMode="singleTask"
+23-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:23:13-44
+24            android:multiprocess="true"
+24-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:22:13-40
+25            android:theme="@style/CoreActivityTranslucent"
+25-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:24:13-59
+26            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+26-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:25:13-72
+27
+28        <provider
+28-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:27:9-35:20
+29            android:name="com.tencent.qcloud.tuikit.timcommon.util.FileProvider"
+29-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:28:13-81
+30            android:authorities="${applicationId}.timcommon.fileprovider"
+30-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:29:13-74
+31            android:exported="false"
+31-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:30:13-37
+32            android:grantUriPermissions="true" >
+32-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:31:13-47
+33            <meta-data
+33-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:32:13-34:60
+34                android:name="android.support.FILE_PROVIDER_PATHS"
+34-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:33:17-67
+35                android:resource="@xml/file_paths_public" />
+35-->F:\00_Projects\taohaoba\TIMCommon\timcommon\src\main\AndroidManifest.xml:34:17-58
+36        </provider>
+37    </application>
+38
+39</manifest>

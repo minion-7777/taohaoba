@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_radius10_242527">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:text="请选择举报原因"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="引导站外沟通/交易"
+            android:tag="1"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="违规商品举报"
+            android:tag="2"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="滥发信息举报"
+            android:tag="3"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="交易欺诈举报"
+            android:tag="4"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="涉未成年人举报"
+            android:tag="5"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="破坏晴朗环境举报"
+            android:tag="6"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="盗版举报"
+            android:tag="7"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/selector_checkbox_selector"
+            android:button="@null"
+            android:background="@null"
+            android:text="其他"
+            android:tag="8"
+            android:textColor="#989898"
+            android:textSize="14sp"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="25dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FDE1B7"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_363739"/>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="#402802"
+            android:textSize="14sp"
+            android:background="@drawable/shape_radius20_ffd497_fafbf5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

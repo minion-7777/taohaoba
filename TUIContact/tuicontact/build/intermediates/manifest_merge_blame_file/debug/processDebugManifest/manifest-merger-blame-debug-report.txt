@@ -1,0 +1,132 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.qcloud.tuikit.tuicontact" >
+4
+5    <uses-sdk android:minSdkVersion="19" />
+6
+7    <application>
+7-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:4:5-73:19
+8
+9        <!-- **************** Classic UI Activity Start **************** -->
+10        <activity
+10-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:6:9-8:52
+11            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.AddMoreActivity"
+11-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:7:13-96
+12            android:screenOrientation="portrait" />
+12-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:8:13-49
+13        <activity
+13-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:9:9-12:73
+14            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.AddMoreDetailActivity"
+14-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:10:13-66
+15            android:screenOrientation="portrait"
+15-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:11:13-49
+16            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+16-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:12:13-70
+17        <activity
+17-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:14:9-16:52
+18            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.NewFriendActivity"
+18-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:15:13-98
+19            android:screenOrientation="portrait" />
+19-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:16:13-49
+20        <activity
+20-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:17:9-19:52
+21            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.BlackListActivity"
+21-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:18:13-98
+22            android:screenOrientation="portrait" />
+22-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:19:13-49
+23        <activity
+23-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:20:9-22:52
+24            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.GroupListActivity"
+24-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:21:13-98
+25            android:screenOrientation="portrait" />
+25-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:22:13-49
+26        <activity
+26-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:24:9-26:52
+27            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.StartC2CChatActivity"
+27-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:25:13-101
+28            android:screenOrientation="portrait" />
+28-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:26:13-49
+29        <activity
+29-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:27:9-30:73
+30            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.StartGroupChatActivity"
+30-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:28:13-103
+31            android:screenOrientation="portrait"
+31-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:29:13-49
+32            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+32-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:30:13-70
+33        <activity
+33-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:32:9-35:52
+34            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.ForwardSelectGroupActivity"
+34-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:33:13-107
+35            android:launchMode="singleInstance"
+35-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:34:13-48
+36            android:screenOrientation="portrait" />
+36-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:35:13-49
+37        <activity
+37-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:36:9-39:52
+38            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.StartGroupMemberSelectActivity"
+38-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:37:13-111
+39            android:launchMode="singleInstance"
+39-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:38:13-48
+40            android:screenOrientation="portrait" />
+40-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:39:13-49
+41        <activity
+41-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:41:9-43:52
+42            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.CreateGroupActivity"
+42-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:42:13-100
+43            android:screenOrientation="portrait" />
+43-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:43:13-49
+44        <activity
+44-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:45:9-47:52
+45            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.GroupTypeSelectActivity"
+45-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:46:13-104
+46            android:screenOrientation="portrait" />
+46-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:47:13-49
+47        <activity
+47-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:49:9-51:52
+48            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.SetGroupManagerActivity"
+48-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:50:13-104
+49            android:screenOrientation="portrait" />
+49-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:51:13-49
+50        <activity
+50-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:52:9-54:52
+51            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.GroupMemberActivity"
+51-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:53:13-100
+52            android:screenOrientation="portrait" />
+52-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:54:13-49
+53        <activity
+53-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:55:9-57:52
+54            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.ManageGroupActivity"
+54-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:56:13-100
+55            android:screenOrientation="portrait" />
+55-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:57:13-49
+56        <activity
+56-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:58:9-61:73
+57            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.GroupApplyManagerActivity"
+57-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:59:13-106
+58            android:screenOrientation="portrait"
+58-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:60:13-49
+59            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+59-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:61:13-70
+60        <activity
+60-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:62:9-65:73
+61            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.GroupApplyDetailActivity"
+61-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:63:13-105
+62            android:screenOrientation="portrait"
+62-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:64:13-49
+63            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+63-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:65:13-70
+64        <activity
+64-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:66:9-69:73
+65            android:name="com.tencent.qcloud.tuikit.tuicontact.classicui.pages.NewFriendApplicationDetailActivity"
+65-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:67:13-115
+66            android:screenOrientation="portrait"
+66-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:68:13-49
+67            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+67-->F:\00_Projects\taohaoba\TUIContact\tuicontact\src\main\AndroidManifest.xml:69:13-70
+68
+69        <!-- **************** Classic UI Activity End **************** -->
+70
+71    </application>
+72
+73</manifest>

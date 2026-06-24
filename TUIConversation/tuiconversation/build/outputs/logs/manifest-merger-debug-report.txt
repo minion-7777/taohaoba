@@ -2,10 +2,7 @@
 manifest
 ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
 INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
-INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
 	package
-		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:1-18:12
 		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml:2:11-69
@@ -27,13 +24,7 @@ uses-sdk
 INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	android:targetSdkVersion
 		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
-		ADDED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
 		INJECTED from F:\00_Projects\taohaoba\TUIConversation\tuiconversation\src\main\AndroidManifest.xml
