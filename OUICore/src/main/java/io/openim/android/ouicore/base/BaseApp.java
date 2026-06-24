@@ -15,13 +15,10 @@ import io.openim.android.ouicore.base.vm.injection.BaseVM;
 import io.openim.android.ouicore.base.vm.injection.Easy;
 import io.openim.android.ouicore.entity.LoginCertificate;
 import io.openim.android.ouicore.utils.LanguageUtil;
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 public class BaseApp extends Application {
 
     private static BaseApp instance;
-    public Realm realm;
     public State<Boolean> isAppBackground = new State<>(true);
     private int mActivityCount;
     public int totalUnreadMsgCount = 0;
@@ -52,21 +49,11 @@ public class BaseApp extends Application {
         Easy.delete(cl);
     }
 
-    private void realmInit() {
-        Realm.init(this);
-        String realmName = "open_im_db";
-        RealmConfiguration config = new RealmConfiguration.Builder()
-            .name(realmName).build();
-        realm = Realm.getInstance(config);
-    }
-
-
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
         MMKV.initialize(this);
-        realmInit();
         activityLifecycleCallback();
 
     }

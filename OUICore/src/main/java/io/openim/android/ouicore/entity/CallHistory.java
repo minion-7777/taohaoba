@@ -1,11 +1,8 @@
 package io.openim.android.ouicore.entity;
 
 import io.openim.android.ouicore.utils.L;
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
 
-public class CallHistory extends RealmObject {
-    @PrimaryKey
+public class CallHistory {
     private String id;
     private String userID;
     private String nickname;

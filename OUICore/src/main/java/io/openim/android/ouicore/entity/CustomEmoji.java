@@ -1,10 +1,6 @@
 package io.openim.android.ouicore.entity;
 
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
-
-public class CustomEmoji extends RealmObject {
-    @PrimaryKey
+public class CustomEmoji {
     private String sourceUrl;
     private String userID;
     private String thumbnailUrl;
