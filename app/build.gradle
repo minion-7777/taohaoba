@@ -10,9 +10,6 @@ android {
     namespace "io.openim.android.taohaoba"
     compileSdk rootProject.ext.androidConfig.compileSdk
 
-    dataBinding {
-        enabled = true
-    }
     defaultConfig {
         minSdk rootProject.ext.androidConfig.minSdk
         targetSdk rootProject.ext.androidConfig.targetSdk
@@ -143,7 +140,9 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
+        buildConfig = true
         viewBinding true
+        dataBinding true
     }
     lint {
         checkReleaseBuilds false
