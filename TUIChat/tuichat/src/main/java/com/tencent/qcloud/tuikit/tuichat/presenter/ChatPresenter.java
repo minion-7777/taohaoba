@@ -433,6 +433,7 @@ public abstract class ChatPresenter {
                     e.printStackTrace();
                 }
                 if (isFailed[0]) {
+                    isLoading = false;
                     TUIChatUtils.callbackOnError(callback, -1, "load failed");
                     return;
                 }
@@ -477,6 +478,7 @@ public abstract class ChatPresenter {
 
             @Override
             public void onError(String module, int errCode, String errMsg) {
+                isLoading = false;
                 TUIChatUtils.callbackOnError(callback, errCode, errMsg);
             }
         });

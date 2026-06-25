@@ -211,6 +211,7 @@ public class GroupChatPresenter extends ChatPresenter {
 
                 @Override
                 public void onError(String module, int errCode, String errMsg) {
+                    isLoading = false;
                     TUIChatLog.e(TAG, "load group message failed " + errCode + "  " + errMsg);
                     TUIChatUtils.callbackOnError(callback, errCode, errMsg);
                 }
