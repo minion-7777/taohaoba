@@ -97,6 +97,7 @@ public class LoginThbActivity extends BaseActivity<LoginVMThb, ActivityLoginBind
             mmkv.encode(PreferencesKey.token, it.getToken());
             mmkv.encode(PreferencesKey.userId, it.getUserId());
             mmkv.encode(PreferencesKey.userSig, it.getImResponse().getData().getUserSig());
+            mmkv.encode(PreferencesKey.imUserId, it.getImResponse().getData().getUserID());
             mmkv.encode(PreferencesKey.userPhone, view.etPhone.getText().toString());
             mmkv.encode(PreferencesKey.allowBeep,true);
             mmkv.encode(PreferencesKey.allowVibration, true);

@@ -191,11 +191,11 @@ public class SplashActivity extends BaseActivity<MainVM, ActivitySplashBinding> 
         String eventId = "enter_main_page";
         GsManager.getInstance().onEvent(eventId);
 
-        String userPhone = mmkv.decodeString(PreferencesKey.userPhone);
         String userSig = mmkv.decodeString(PreferencesKey.userSig);
+        String imUserId = mmkv.decodeString(PreferencesKey.imUserId);
 
         if (isLogin()) {
-            TUILogin.login(getBaseContext(), GenerateTestUserSig.SDKAPPID, userPhone, userSig, new TUICallback() {
+            TUILogin.login(getBaseContext(), GenerateTestUserSig.SDKAPPID, imUserId, userSig, new TUICallback() {
                 @Override
                 public void onSuccess() {
                     Log.d("imsdk", "登录成功");

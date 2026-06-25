@@ -30,4 +30,6 @@ public class PreferencesKey {
     public static final String im_seller_id = "im_seller_id";
     public static final String im_buyer_id = "im_buyer_id";
     public static final String userSig = "userSig";
+    // Tencent IM userID — may differ from userId; must match the identifier used to generate userSig
+    public static final String imUserId = "imUserId";
 }
