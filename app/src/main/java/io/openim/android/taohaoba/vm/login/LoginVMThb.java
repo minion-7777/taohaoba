@@ -66,7 +66,6 @@ public class LoginVMThb extends BaseViewModel<LoginVMThb.ViewAction> {
                                 //缓存登录信息
                                 LoginCertificate loginCertificate = new LoginCertificate();
                                 loginCertificate.userID = loginBean.getImResponse().getData().getUserID();
-                                loginCertificate.imToken = loginBean.getImResponse().getData().getImToken();
                                 loginCertificate.chatToken = loginBean.getImResponse().getData().getChatToken();
 
                                 loginCertificate.cache(getContext());

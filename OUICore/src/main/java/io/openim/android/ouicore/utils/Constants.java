@@ -11,41 +11,12 @@ import io.openim.android.ouicore.base.BaseApp;
 public class Constants {
 
     public static final String baseUrlThb = BuildConfig.DEBUG ? "http://47.107.77.24:8080/" : "https://api.taohao8.vip/";
-    public static final String DEFAULT_HOST = BuildConfig.DEBUG ? "http://47.107.77.24:10008/" : "https://imserver.taohao8.vip/";
-    public static final String API = BuildConfig.DEBUG ? "https://www.taohao8.top/imapi" : "https://imsdk.taohao8.vip";
-    public static final String WS = BuildConfig.DEBUG ? "wss://openim.taohao8.top" : "wss://imws.taohao8.vip";
+    public static final String DEFAULT_HOST = BuildConfig.DEBUG ? "http://47.107.77.24/" : "https://imserver.taohao8.vip/";
     private static final String APP_AUTH = DEFAULT_HOST;
-    private static final String IM_API = API;
-    private static final String IM_WS = WS;
-
-    public static String getHost() {
-        String url = SharedPreferencesUtil.get(BaseApp.inst()).getString("DEFAULT_IP");
-        if (TextUtils.isEmpty(url)) return DEFAULT_HOST;
-        return url;
-    }
-
-    public static String getImApiUrl() {
-        String url = SharedPreferencesUtil.get(BaseApp.inst()).getString("IM_API_URL");
-        if (TextUtils.isEmpty(url)) return IM_API;
-        return url;
-    }
-
 
     public static String getAppAuthUrl() {
         String url = SharedPreferencesUtil.get(BaseApp.inst()).getString("APP_AUTH_URL");
         if (TextUtils.isEmpty(url)) return APP_AUTH;
-        return url;
-    }
-
-    public static String getImWsUrl() {
-        String url = SharedPreferencesUtil.get(BaseApp.inst()).getString("IM_WS_URL");
-        if (TextUtils.isEmpty(url)) return IM_WS;
-        return url;
-    }
-
-    public static String getStorageType() {
-        String url = SharedPreferencesUtil.get(BaseApp.inst()).getString("STORAGE_TYPE");
-        if (TextUtils.isEmpty(url)) return "minio";
         return url;
     }
 
@@ -66,8 +37,8 @@ public class Constants {
 
     //二维码
     public static class QR {
-        public static final String QR_ADD_FRIEND = "io.openim.app/addFriend";
-        public static final String QR_JOIN_GROUP = "io.openim.app/joinGroup";
+        public static final String QR_ADD_FRIEND = "taohaoba://addFriend";
+        public static final String QR_JOIN_GROUP = "taohaoba://joinGroup";
     }
 
 

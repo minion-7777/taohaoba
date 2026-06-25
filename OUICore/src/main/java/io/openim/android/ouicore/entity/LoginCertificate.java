@@ -15,7 +15,6 @@ public class LoginCertificate {
     public String nickname;
     public String faceURL;
     public String userID;
-    public String imToken;
     public String chatToken;
 
     //允许非好友发送消息

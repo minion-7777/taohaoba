@@ -16,9 +16,13 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.util.Log;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.lxj.xpopup.XPopup;
 import com.lxj.xpopup.core.BasePopupView;
+import com.tencent.imsdk.v2.V2TIMCallback;
+import com.tencent.imsdk.v2.V2TIMManager;
 
 import io.openim.android.ouicore.base.BaseActivity;
 import io.openim.android.ouicore.utils.ActivityManager;
@@ -102,21 +106,26 @@ public class AccountCancellationActivity extends BaseActivity<WalletVM, Activity
     }
 
     private void imLogout(){
-//        OpenIMClient.getInstance().logout(new OnBase<String>() {
-//            @Override
-//            public void onError(int code, String error) {
-//                dismissLoadingDialog();
-//            }
-//            @Override
-//            public void onSuccess(String data) {
-//                dismissLoadingDialog();
-//                FirebaseMessaging.getInstance().deleteToken();
-//                mmkv.clearAll();
-//                IMUtil.logout((AppCompatActivity) AccountCancellationActivity.this, MainActivity.class);
-//                ActivityManager.finishAllExceptActivity();
-//                launchActivity(MainActivity.class);
-//            }
-//        });
+        V2TIMManager.getInstance().logout(new V2TIMCallback() {
+            @Override
+            public void onSuccess() {
+                Log.i("imsdk", "注销账号退出登录成功");
+                dismissLoadingDialog();
+                FirebaseMessaging.getInstance().deleteToken();
+                mmkv.clearAll();
+                ActivityManager.finishAllExceptActivity();
+                launchActivity(MainActivity.class);
+            }
+
+            @Override
+            public void onError(int code, String desc) {
+                Log.e("imsdk", "退出登录失败, code:" + code + ", desc:" + desc);
+                dismissLoadingDialog();
+                mmkv.clearAll();
+                ActivityManager.finishAllExceptActivity();
+                launchActivity(MainActivity.class);
+            }
+        });
     }
 
     private void protocolInit() {

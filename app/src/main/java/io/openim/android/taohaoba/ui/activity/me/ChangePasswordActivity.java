@@ -6,7 +6,11 @@ import static io.openim.android.taohaoba.utils.AnimatorUtil.shakeAnimation;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+
+import com.tencent.imsdk.v2.V2TIMCallback;
+import com.tencent.imsdk.v2.V2TIMManager;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -56,17 +60,20 @@ public class ChangePasswordActivity extends BaseActivity<WalletVM, ActivityChang
             showToast("修改成功");
             WaitDialog waitDialog = new WaitDialog(this);
             waitDialog.show();
-//            OpenIMClient.getInstance().logout(new OnBase<String>() {
-//                @Override
-//                public void onError(int code, String error) {
-//                    waitDialog.dismiss();
-//                }
-//                @Override
-//                public void onSuccess(String data) {
-//                    waitDialog.dismiss();
-//                    EventBus.getDefault().post(new MessageEvent(Constants.NOLOGIN));
-//                }
-//            });
+            V2TIMManager.getInstance().logout(new V2TIMCallback() {
+                @Override
+                public void onSuccess() {
+                    waitDialog.dismiss();
+                    EventBus.getDefault().post(new MessageEvent(Constants.NOLOGIN));
+                }
+
+                @Override
+                public void onError(int code, String desc) {
+                    Log.e("imsdk", "退出登录失败, code:" + code + ", desc:" + desc);
+                    waitDialog.dismiss();
+                    EventBus.getDefault().post(new MessageEvent(Constants.NOLOGIN));
+                }
+            });
         });
 
     }
