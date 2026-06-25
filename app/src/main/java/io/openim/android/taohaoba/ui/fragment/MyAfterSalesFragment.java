@@ -258,10 +258,14 @@ public class MyAfterSalesFragment extends BaseFragment<AfterSalesVM> implements 
 
                 tv_contactCustomerService.setOnClickListener(v->{
                     //联系客服
+                    String groupId = it.getOrder_post_sale() != null ? it.getOrder_post_sale().getIm_group_id() : null;
+                    if (TextUtils.isEmpty(groupId)) {
+                        Toast.makeText(getContext(), "群聊尚未创建，请稍后再试", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     Bundle param = new Bundle();
                     param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                    // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
-                    param.putString(TUIConstants.TUIChat.CHAT_ID, it.getOrder_post_sale().getIm_group_id());
+                    param.putString(TUIConstants.TUIChat.CHAT_ID, groupId);
                     TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
                 });
 
@@ -356,9 +360,12 @@ public class MyAfterSalesFragment extends BaseFragment<AfterSalesVM> implements 
 
                 tv_contactCustomerService.setOnClickListener(v->{
                     //联系客服
+                    if (TextUtils.isEmpty(it.getIm_group_id())) {
+                        Toast.makeText(getContext(), "群聊尚未创建，请稍后再试", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     Bundle param = new Bundle();
                     param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                    // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
                     param.putString(TUIConstants.TUIChat.CHAT_ID, it.getIm_group_id());
                     TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
                 });

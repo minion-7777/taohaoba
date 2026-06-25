@@ -205,9 +205,12 @@ public class ProductDetailsActivity extends BaseActivity<ProductDetailsVM, Activ
 //                startActivity(new Intent(this, ConfirmAnOrderActivity.class)
 //                        .putExtra("order_id", it.getOrder_id()));
             } else if (mJump2TargetActivity.equalsIgnoreCase("ChatActivity")) {
+                if (TextUtils.isEmpty(it.getIm_group_id())) {
+                    toast("群聊创建失败，请稍后再试");
+                    return;
+                }
                 Bundle param = new Bundle();
                 param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
                 param.putString(TUIConstants.TUIChat.CHAT_ID, it.getIm_group_id());
                 TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
             } else {

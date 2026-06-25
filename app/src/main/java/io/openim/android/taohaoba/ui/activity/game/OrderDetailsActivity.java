@@ -139,14 +139,15 @@ public class OrderDetailsActivity extends BaseActivity<OrderDetailsVM, ActivityO
 
         //联系客服
         view.tvContactCustomerService.setOnClickListener(v->{
-            if (!TextUtils.isEmpty(detailsBean.getOrder_no())) {
-                ActivityManager.finishActivity(ActivityManager.isExist(TUIGroupChatActivity.class));
-                Bundle param = new Bundle();
-                param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
-                param.putString(TUIConstants.TUIChat.CHAT_ID, detailsBean.getIm_group_id());
-                TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
+            if (TextUtils.isEmpty(detailsBean.getIm_group_id())) {
+                showToast("群聊尚未创建，请稍后再试");
+                return;
             }
+            ActivityManager.finishActivity(ActivityManager.isExist(TUIGroupChatActivity.class));
+            Bundle param = new Bundle();
+            param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
+            param.putString(TUIConstants.TUIChat.CHAT_ID, detailsBean.getIm_group_id());
+            TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
         });
 
         //立即支付

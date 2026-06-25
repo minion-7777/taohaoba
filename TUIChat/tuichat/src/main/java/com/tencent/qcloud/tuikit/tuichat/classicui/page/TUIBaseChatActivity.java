@@ -59,6 +59,9 @@ public abstract class TUIBaseChatActivity extends BaseLightActivity {
         if (chatInfo != null) {
             initChat(chatInfo);
         } else {
+            int chatType = intent != null ? intent.getIntExtra(TUIConstants.TUIChat.CHAT_TYPE, ChatInfo.TYPE_INVALID) : ChatInfo.TYPE_INVALID;
+            String chatId = intent != null ? intent.getStringExtra(TUIConstants.TUIChat.CHAT_ID) : null;
+            TUIChatLog.e(TAG, "init chat failed: chatType=" + chatType + " chatId=" + chatId);
             ToastUtil.toastShortMessage("init chat failed , chatInfo is empty.");
             TUIChatLog.e(TAG, "init chat failed , chatInfo is empty.");
             finish();

@@ -1,6 +1,8 @@
 package com.tencent.qcloud.tuikit.tuiconversation.classicui.util;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 
 import com.tencent.imsdk.v2.V2TIMConversation;
 import com.tencent.qcloud.tuicore.TUIConstants;
@@ -10,10 +12,23 @@ import com.tencent.qcloud.tuikit.tuiconversation.bean.ConversationInfo;
 import java.io.Serializable;
 
 public class TUIConversationUtils {
+    private static final String TAG = "TUIConversationUtils";
+
     public static void startChatActivity(ConversationInfo conversationInfo) {
         Bundle param = new Bundle();
         param.putInt(TUIConstants.TUIChat.CHAT_TYPE, conversationInfo.isGroup() ? V2TIMConversation.V2TIM_GROUP : V2TIMConversation.V2TIM_C2C);
-        param.putString(TUIConstants.TUIChat.CHAT_ID, conversationInfo.getId());
+
+        String chatId = conversationInfo.getId();
+        if (TextUtils.isEmpty(chatId) && conversationInfo.isGroup()) {
+            // getId() (groupID) was empty; try extracting from full conversationId (format: "group_<groupID>")
+            String conversationId = conversationInfo.getConversationId();
+            Log.w(TAG, "group chatId is empty, conversationId=" + conversationId);
+            if (!TextUtils.isEmpty(conversationId) && conversationId.startsWith("group_")) {
+                chatId = conversationId.substring("group_".length());
+            }
+        }
+        Log.d(TAG, "startChatActivity isGroup=" + conversationInfo.isGroup() + " chatId=" + chatId);
+        param.putString(TUIConstants.TUIChat.CHAT_ID, chatId);
         param.putString(TUIConstants.TUIChat.CHAT_NAME, conversationInfo.getTitle());
         if (conversationInfo.getDraft() != null) {
             param.putString(TUIConstants.TUIChat.DRAFT_TEXT, conversationInfo.getDraft().getDraftText());

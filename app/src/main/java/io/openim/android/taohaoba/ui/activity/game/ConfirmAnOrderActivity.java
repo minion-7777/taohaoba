@@ -126,11 +126,12 @@ public class ConfirmAnOrderActivity extends BaseActivity<OrderDetailsVM, Activit
                     e.printStackTrace();
                 }
                 ActivityManager.finishAllExceptActivity(MainActivity.class);
-                Bundle param = new Bundle();
-                param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
-                param.putString(TUIConstants.TUIChat.CHAT_ID, group_id);
-                TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
+                if (!TextUtils.isEmpty(group_id)) {
+                    Bundle param = new Bundle();
+                    param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
+                    param.putString(TUIConstants.TUIChat.CHAT_ID, group_id);
+                    TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
+                }
             }else {
                 initPay(it);
             }
@@ -388,11 +389,12 @@ public class ConfirmAnOrderActivity extends BaseActivity<OrderDetailsVM, Activit
                             e.printStackTrace();
                         }
                         ActivityManager.finishAllExceptActivity(MainActivity.class);
-                        Bundle param = new Bundle();
-                        param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
-                        // 如果是 C2C 聊天，chatID 是对方的 UserID，如果是 Group 聊天，chatID 是 GroupID
-                        param.putString(TUIConstants.TUIChat.CHAT_ID, group_id);
-                        TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
+                        if (!TextUtils.isEmpty(group_id)) {
+                            Bundle param = new Bundle();
+                            param.putInt(TUIConstants.TUIChat.CHAT_TYPE, V2TIMConversation.V2TIM_GROUP);
+                            param.putString(TUIConstants.TUIChat.CHAT_ID, group_id);
+                            TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
+                        }
                     } else {
                         // 该笔订单真实的支付结果，需要依赖服务端的异步通知。
                         vm.goods_stock_update(order_id);
