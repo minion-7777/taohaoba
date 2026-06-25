@@ -78,6 +78,7 @@ public class LoginVMThb extends BaseViewModel<LoginVMThb.ViewAction> {
                             @Override
                             public void onError(int errorCode, String errorMessage) {
                                 Log.i("imsdk", "登录失败, code:" + errorCode + ", desc:" + errorMessage);
+                                getIView().err("登录失败: " + errorMessage + " (" + errorCode + ")");
                             }
                         });
 
