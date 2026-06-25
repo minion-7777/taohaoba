@@ -59,7 +59,7 @@ public class LoginVMThb extends BaseViewModel<LoginVMThb.ViewAction> {
                 .subscribe(new NetObserverThb<LoginBean>(getContext()) {
                     @Override
                     public void onSuccess(LoginBean loginBean) {
-                        TUILogin.login(getContext(), GenerateTestUserSig.SDKAPPID, username, loginBean.getImResponse().getData().getUserSig(), new TUICallback() {
+                        TUILogin.login(getContext(), GenerateTestUserSig.SDKAPPID, loginBean.getImResponse().getData().getUserID(), loginBean.getImResponse().getData().getUserSig(), new TUICallback() {
                             @Override
                             public void onSuccess() {
                                 Log.d("imsdk", "登录成功");
